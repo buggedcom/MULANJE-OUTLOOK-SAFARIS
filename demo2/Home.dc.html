@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="ext-resource-dependency" content="photos/mulanje-hero.jpg" data-resource-id="mulanje-hero" />
+<meta name="ext-resource-dependency" content="photos/mulanje-peaks.jpg" data-resource-id="mulanje-peaks" />
+<meta name="ext-resource-dependency" content="photos/mulanje-boulders.jpg" data-resource-id="mulanje-boulders" />
+<meta name="ext-resource-dependency" content="photos/mulanje-view.jpg" data-resource-id="mulanje-view" />
+<meta name="ext-resource-dependency" content="photos/mulanje-approach.jpg" data-resource-id="mulanje-approach" />
+<meta name="ext-resource-dependency" content="photos/sapitwa.jpg" data-resource-id="sapitwa" />
+<meta name="ext-resource-dependency" content="photos/rock-pool.jpg" data-resource-id="rock-pool" />
+<meta name="ext-resource-dependency" content="photos/hikers-trail.jpg" data-resource-id="hikers-trail" />
+<meta name="ext-resource-dependency" content="photos/hikers-valley.jpg" data-resource-id="hikers-valley" />
+<meta name="ext-resource-dependency" content="photos/waterfall-pool.jpg" data-resource-id="waterfall-pool" />
+<meta name="ext-resource-dependency" content="photos/summit-sign.jpg" data-resource-id="summit-sign" />
+<meta name="ext-resource-dependency" content="photos/summit-celebrate.jpg" data-resource-id="summit-celebrate" />
+<meta name="ext-resource-dependency" content="photos/misty-summit.jpg" data-resource-id="misty-summit" />
+<meta name="ext-resource-dependency" content="photos/elephant.jpg" data-resource-id="elephant" />
+<meta name="ext-resource-dependency" content="photos/elephant2.jpg" data-resource-id="elephant2" />
+<meta name="ext-resource-dependency" content="photos/hippos.jpg" data-resource-id="hippos" />
+<meta name="ext-resource-dependency" content="photos/boat-safari.jpg" data-resource-id="boat-safari" />
+<meta name="ext-resource-dependency" content="photos/kudu.jpg" data-resource-id="kudu" />
+<meta name="ext-resource-dependency" content="photos/antelope.jpg" data-resource-id="antelope" />
+<meta name="ext-resource-dependency" content="photos/safari-vehicle.jpg" data-resource-id="safari-vehicle" />
+<meta name="ext-resource-dependency" content="photos/lake-beach.jpg" data-resource-id="lake-beach" />
+<meta name="ext-resource-dependency" content="photos/lake-sunset.jpg" data-resource-id="lake-sunset" />
+<meta name="ext-resource-dependency" content="photos/lake-boat.jpg" data-resource-id="lake-boat" />
+<meta name="ext-resource-dependency" content="photos/tea-picker.jpg" data-resource-id="tea-picker" />
+<meta name="ext-resource-dependency" content="photos/tea-mountain.jpg" data-resource-id="tea-mountain" />
+<meta name="ext-resource-dependency" content="photos/tea-estate.jpg" data-resource-id="tea-estate" />
+<meta name="ext-resource-dependency" content="photos/tea-carry.jpg" data-resource-id="tea-carry" />
+<meta name="ext-resource-dependency" content="photos/village-dance.jpg" data-resource-id="village-dance" />
+<meta name="ext-resource-dependency" content="photos/village-group.jpg" data-resource-id="village-group" />
+<meta name="ext-resource-dependency" content="photos/team.jpg" data-resource-id="team" />
+<meta name="ext-resource-dependency" content="photos/sunset-tree.jpg" data-resource-id="sunset-tree" />
+<meta name="ext-resource-dependency" content="photos/new-misty-summit.jpg" data-resource-id="new-misty-summit" />
+<meta name="ext-resource-dependency" content="photos/new-tea-landscape.jpg" data-resource-id="new-tea-landscape" />
+<meta name="ext-resource-dependency" content="photos/new-tea-pickers.jpg" data-resource-id="new-tea-pickers" />
+<meta name="ext-resource-dependency" content="photos/new-summit-figure.jpg" data-resource-id="new-summit-figure" />
+<meta name="ext-resource-dependency" content="photos/new-tea-mountain.jpg" data-resource-id="new-tea-mountain" />
+<meta name="ext-resource-dependency" content="photos/new-lion.jpg" data-resource-id="new-lion" />
+<meta name="ext-resource-dependency" content="photos/new-serval.jpg" data-resource-id="new-serval" />
+<meta name="ext-resource-dependency" content="photos/new-trogon.jpg" data-resource-id="new-trogon" />
+<meta name="ext-resource-dependency" content="photos/new-gazelle.jpg" data-resource-id="new-gazelle" />
+<meta name="ext-resource-dependency" content="photos/new-rock-dome.jpg" data-resource-id="new-rock-dome" />
+<meta name="ext-resource-dependency" content="photos/new-elephant.jpg" data-resource-id="new-elephant" />
+<meta name="ext-resource-dependency" content="photos/new-plateau.jpg" data-resource-id="new-plateau" />
+<meta name="ext-resource-dependency" content="photos/new-elephant-herd.jpg" data-resource-id="new-elephant-herd" />
+<meta name="ext-resource-dependency" content="photos/new-zomba-slope.jpg" data-resource-id="new-zomba-slope" />
+<meta name="ext-resource-dependency" content="photos/new-lake-island.jpg" data-resource-id="new-lake-island" />
+<meta name="ext-resource-dependency" content="photos/new-lake-village.jpg" data-resource-id="new-lake-village" />
+<link rel="stylesheet" href="_ds/organic-ecf9dcd4-97c7-46aa-a951-fb6ce50e0637/styles.css">
+<script src="_ds/organic-ecf9dcd4-97c7-46aa-a951-fb6ce50e0637/_ds_bundle.js"></script>
+<style>
+  @keyframes moslideup { from { opacity:0; transform:translateY(14px);} to {opacity:1;transform:none;} }
+  html { scroll-behavior: smooth; }
+  a { color: var(--color-accent); } a:hover { color: var(--color-accent-700); }
+  .mo-navlink:hover { color: var(--color-accent) !important; }
+  .mo-photo { transition: transform .6s ease, filter .4s ease; filter: var(--mo-photo-filter, none); }
+  .mo-zoom { overflow:hidden; }
+  .mo-zoom:hover .mo-photo { transform: scale(1.06); }
+  .mo-xcard { transition: transform .25s ease, box-shadow .25s ease; }
+  .mo-xcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-bg-color="#f5ead8">
+    <rect width="100" height="100" fill="#f5ead8"/>
+    <circle cx="66" cy="34" r="8" fill="#c67139"/>
+    <path d="M14 74 L38 36 L52 56 L64 42 L84 74 Z" fill="#b2622d"/>
+    <path d="M38 36 L47 50 L42 58 Z" fill="#643312" opacity="0.5"/>
+  </svg>
+</template>
+
+<div style="background:var(--color-bg); color:var(--color-text); min-height:100vh; overflow-x:hidden;">{{ app }}</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;palette&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Terracotta&quot;,&quot;Savanna Gold&quot;,&quot;Forest&quot;,&quot;Sunset&quot;,&quot;Zambezi Teal&quot;,&quot;Jacaranda&quot;,&quot;Chili Red&quot;,&quot;Lake Cobalt&quot;,&quot;Baobab Berry&quot;,&quot;Marula Lime&quot;,&quot;Kingfisher&quot;,&quot;Spiced Amber&quot;,&quot;Yellow &amp; Forest&quot;,&quot;Bold Yellow&quot;,&quot;Bold Green&quot;],&quot;default&quot;:&quot;Terracotta&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;,&quot;subtitle&quot;:&quot;Recolors the whole site&quot;},
+  &quot;heroStyle&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Split&quot;,&quot;Immersive&quot;],&quot;default&quot;:&quot;Split&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;,&quot;subtitle&quot;:&quot;Hero composition&quot;},
+  &quot;photoMood&quot;: {&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Soft&quot;,&quot;Natural&quot;,&quot;Bold&quot;],&quot;default&quot;:&quot;Natural&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Feel&quot;,&quot;subtitle&quot;:&quot;Photography treatment&quot;}
+}">
+class Component extends DCLogic {
+  state = { route:'home', menuOpen:false, w:(typeof window!=='undefined'?window.innerWidth:1200), hero:0, open:2, uiPalette:'', uiHero:'', uiMood:'' };
+
+  componentDidMount(){
+    this._onR = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this._onR);
+    this._routes = ['home','about','destinations','tours','tour','activities','gallery','contact'];
+    this._onH = () => { const r=(location.hash||'').replace('#',''); if(this._routes.includes(r)) this.setState({route:r}); };
+    window.addEventListener('hashchange', this._onH);
+    const r=(location.hash||'').replace('#',''); if(this._routes.includes(r)) this.setState({route:r});
+    this._t = setInterval(()=> this.setState(s=>({hero:(s.hero+1)%3})), 4200);
+  }
+  componentWillUnmount(){ window.removeEventListener('resize',this._onR); window.removeEventListener('hashchange',this._onH); clearInterval(this._t); }
+
+  img(p){ const m=(typeof window!=='undefined'&&window.__resources)||{}; const id=p.replace('photos/','').replace('.jpg',''); return m[id]||p; }
+  go(route, anchor){ this.setState({route, menuOpen:false}); if(typeof location!=='undefined') location.hash=route; setTimeout(()=>{ if(anchor){ const el=document.getElementById(anchor); if(el) el.scrollIntoView({behavior:'smooth'}); } else window.scrollTo({top:0}); }, 40); }
+  ic(d,sz,col){ return React.createElement('svg',{width:sz||18,height:sz||18,viewBox:'0 0 24 24',fill:'none',stroke:col||'currentColor',strokeWidth:2.75,strokeLinecap:'round',strokeLinejoin:'round'}, (Array.isArray(d)?d:[d]).map((p,i)=>React.createElement('path',{key:i,d:p}))); }
+  mark(color){
+    const light = color==='light';
+    const pinFill = light ? 'var(--color-accent-2-300)' : 'var(--color-accent-2-600)';
+    const mtn = light ? 'var(--color-neutral-900)' : 'var(--color-bg)';
+    const ridge = light ? 'var(--color-accent-2-500)' : 'var(--color-accent-2-800)';
+    return React.createElement('svg',{width:38,height:38,viewBox:'0 0 44 44',fill:'none'},
+      React.createElement('path',{d:'M22 2.5C13.4 2.5 6.5 9.4 6.5 18c0 8.5 9 19 15.5 23.5C28.5 37 37.5 26.5 37.5 18 37.5 9.4 30.6 2.5 22 2.5Z',fill:pinFill}),
+      React.createElement('circle',{cx:28.5,cy:14,r:2.9,fill:'var(--color-accent)'}),
+      React.createElement('path',{d:'M9 27 L14.5 18.5 L18 23 L22.5 15.5 L26 20.5 L30 26 L35 27 Z',fill:ridge,opacity:light?0.5:0.4}),
+      React.createElement('path',{d:'M9.5 27.5 L15.5 19 L19 23.5 L23 16 L26.5 21.5 L30 18 L34.5 27.5 Z',fill:mtn}));
+  }
+  genRamp(prefix,h,c){
+    const steps=[[100,.955,.22],[200,.90,.42],[300,.84,.62],[400,.75,.85],[500,.64,1],[600,.57,1.05],[700,.49,.98],[800,.40,.84],[900,.30,.66]];
+    const o={}; o['--color-'+prefix]='oklch(0.585 '+c.toFixed(3)+' '+h+')';
+    for(const s of steps){ o['--color-'+prefix+'-'+s[0]]='oklch('+s[1]+' '+(c*s[2]).toFixed(3)+' '+h+')'; }
+    return o;
+  }
+  feelVars(){
+    const style={};
+    const pal=this.state.uiPalette||this.props.palette||'Terracotta';
+    const mood=this.state.uiMood||this.props.photoMood||'Natural';
+    const P={'Savanna Gold':[92,.15,150,.10,'oklch(0.95 0.03 90)','oklch(0.92 0.032 90)','oklch(0.23 0.02 80)'],
+      'Forest':[150,.115,92,.15,'oklch(0.965 0.015 150)','oklch(0.935 0.018 150)','oklch(0.20 0.03 158)'],
+      'Sunset':[40,.15,110,.09,'oklch(0.95 0.03 60)','oklch(0.92 0.033 55)','oklch(0.24 0.03 40)'],
+      'Zambezi Teal':[190,.13,50,.15,'oklch(0.96 0.02 200)','oklch(0.93 0.024 200)','oklch(0.22 0.03 220)'],
+      'Jacaranda':[290,.15,140,.13,'oklch(0.96 0.02 300)','oklch(0.93 0.026 300)','oklch(0.23 0.035 300)'],
+      'Chili Red':[28,.19,150,.11,'oklch(0.96 0.022 40)','oklch(0.93 0.028 40)','oklch(0.24 0.04 30)'],
+      'Lake Cobalt':[250,.16,60,.16,'oklch(0.96 0.02 245)','oklch(0.93 0.026 245)','oklch(0.22 0.04 260)'],
+      'Baobab Berry':[350,.16,150,.12,'oklch(0.96 0.022 350)','oklch(0.93 0.03 350)','oklch(0.23 0.04 350)'],
+      'Marula Lime':[128,.17,45,.16,'oklch(0.965 0.028 128)','oklch(0.935 0.032 128)','oklch(0.22 0.04 140)'],
+      'Kingfisher':[215,.16,40,.17,'oklch(0.96 0.022 210)','oklch(0.93 0.028 210)','oklch(0.22 0.04 225)'],
+      'Spiced Amber':[62,.16,25,.15,'oklch(0.955 0.03 70)','oklch(0.925 0.034 70)','oklch(0.24 0.035 45)'],
+      'Yellow & Forest':[101,.21,150,.17,'oklch(0.955 0.055 108)','oklch(0.92 0.06 138)','oklch(0.19 0.055 150)'],
+      'Bold Yellow':[103,.215,95,.20,'oklch(0.97 0.06 104)','oklch(0.935 0.07 102)','oklch(0.21 0.06 98)'],
+      'Bold Green':[150,.18,101,.21,'oklch(0.96 0.045 150)','oklch(0.925 0.05 150)','oklch(0.17 0.055 155)']}[pal];
+    if(P){ Object.assign(style, this.genRamp('accent',P[0],P[1]), this.genRamp('accent-2',P[2],P[3]),
+      {'--color-bg':P[4],'--color-surface':P[5],'--color-text':P[6],'--color-divider':'color-mix(in srgb, '+P[6]+' 13%, transparent)',background:'var(--color-bg)',color:'var(--color-text)',minHeight:'100vh'}); }
+    style['--mo-photo-filter'] = mood==='Soft'?'saturate(.82) contrast(.96) brightness(1.02)' : mood==='Bold'?'saturate(1.18) contrast(1.06)' : 'none';
+    return style;
+  }
+  h(tag, props, ...kids){ return React.createElement(tag, props, ...kids); }
+  htmlP(tag, props, html){ return React.createElement(tag, Object.assign({}, props, {dangerouslySetInnerHTML:{__html:html}})); }
+
+  // ---------- OPTIONS SWITCHER ----------
+  switcher(){
+    const H=this.h.bind(this);
+    const pal=this.state.uiPalette||this.props.palette||'Terracotta';
+    const hero=this.state.uiHero||this.props.heroStyle||'Split';
+    const mood=this.state.uiMood||this.props.photoMood||'Natural';
+    const pals=['Terracotta','Savanna Gold','Forest','Sunset','Zambezi Teal','Jacaranda','Chili Red','Lake Cobalt','Baobab Berry','Marula Lime','Kingfisher','Spiced Amber','Yellow & Forest','Bold Yellow','Bold Green'];
+    const seg=(opts,val,on)=>H('div',{style:{display:'inline-flex',background:'rgba(255,255,255,.10)',borderRadius:'999px',padding:'3px',gap:'2px'}}, opts.map((o,i)=>H('button',{key:i,type:'button',onClick:()=>on(o),style:{border:'none',cursor:'pointer',borderRadius:'999px',padding:'6px 13px',fontSize:'12.5px',fontFamily:'var(--font-body)',background:val===o?'var(--color-accent)':'transparent',color:val===o?'#fff':'rgba(255,255,255,.85)'}},o)));
+    const lbl={display:'inline-flex',alignItems:'center',gap:'9px',fontSize:'12px',letterSpacing:'.06em',textTransform:'uppercase',color:'rgba(255,255,255,.6)'};
+    return H('div',{style:{background:'var(--color-neutral-900)',color:'#fff',borderBottom:'1px solid rgba(255,255,255,.08)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'11px var(--space-4)',display:'flex',flexWrap:'wrap',alignItems:'center',gap:'14px 22px'}},
+        H('span',{style:{fontSize:'12px',letterSpacing:'.16em',textTransform:'uppercase',color:'#fff',fontFamily:'var(--font-heading)'}},'Try a look'),
+        H('label',{style:lbl},'Palette',
+          H('select',{value:pal,onChange:(e)=>this.setState({uiPalette:e.target.value}),style:{appearance:'none',borderRadius:'999px',border:'none',padding:'8px 16px',fontFamily:'var(--font-body)',fontSize:'13px',letterSpacing:'0',textTransform:'none',background:'var(--color-accent)',color:'#fff',cursor:'pointer'}}, pals.map((o,i)=>H('option',{key:i,value:o,style:{color:'#201e1d',background:'#fff'}},o)))),
+        H('label',{style:lbl},'Hero', seg(['Split','Immersive'],hero,(o)=>this.setState({uiHero:o}))),
+        H('label',{style:lbl},'Photos', seg(['Soft','Natural','Bold'],mood,(o)=>this.setState({uiMood:o})))));
+  }
+
+  // ---------- NAV ----------
+  nav(){
+    const mobile = this.state.w < 900;
+    const rt = this.state.route;
+    const link = (label, route, anchor) => React.createElement('a',{className:'mo-navlink',href:'#'+route,onClick:(e)=>{e.preventDefault();this.go(route,anchor);},style:{color:(rt===route&&!anchor)?'var(--color-accent)':'inherit',textDecoration:'none',fontSize:'14.5px',cursor:'pointer'}}, label);
+    const links = [link('Home','home'), link('About','about'), link('Destinations','destinations'), link('Tours','tours'), link('Activities','activities'), link('Gallery','gallery'), link('Contact','contact'),
+      React.createElement('a',{key:'cta',className:'btn btn-primary',href:'#',onClick:(e)=>{e.preventDefault();this.go('contact');},style:{padding:'10px 18px'}},'Enquire')];
+    return React.createElement('header',{style:{position:'sticky',top:0,zIndex:50,background:'color-mix(in srgb, var(--color-bg) 88%, transparent)',backdropFilter:'blur(10px)',borderBottom:'1px solid var(--color-divider)'}},
+      React.createElement('nav',{style:{maxWidth:'1200px',margin:'0 auto',display:'flex',alignItems:'center',gap:'var(--space-4)',padding:'14px var(--space-4)'}},
+        React.createElement('a',{href:'#home',onClick:(e)=>{e.preventDefault();this.go('home');},style:{display:'flex',alignItems:'center',gap:'11px',textDecoration:'none',color:'var(--color-text)',marginRight:'auto',cursor:'pointer'}},
+          React.createElement('span',{style:{display:'inline-flex'}}, this.mark('dark')),
+          React.createElement('span',{style:{display:'flex',flexDirection:'column',lineHeight:1}},
+            React.createElement('span',{style:{fontFamily:'var(--font-heading)',fontSize:'19px',letterSpacing:'-.01em'}},'Mulanje Outlook'),
+            React.createElement('span',{style:{fontSize:'10px',letterSpacing:'.28em',textTransform:'uppercase',color:'var(--color-accent-700)',marginTop:'3px'}},'Travel & Safaris'))),
+        !mobile && React.createElement('div',{style:{display:'flex',alignItems:'center',gap:'19px'}}, links),
+        mobile && React.createElement('button',{type:'button',onClick:()=>this.setState(s=>({menuOpen:!s.menuOpen})),'aria-label':'Menu',className:'btn btn-secondary btn-icon',style:{width:'42px',height:'42px'}}, this.ic(['M4 7h16','M4 12h16','M4 17h16'],20))),
+      mobile && this.state.menuOpen && React.createElement('div',{style:{background:'var(--color-bg)',borderTop:'1px solid var(--color-divider)'}},
+        React.createElement('div',{style:{display:'flex',flexDirection:'column',gap:'2px',padding:'8px var(--space-4) 18px',maxWidth:'1200px',margin:'0 auto'}},
+          ['Home:home','About:about','Destinations:destinations','Tours:tours','Activities:activities','Gallery:gallery','Contact:contact'].map((s,i)=>{const[l,r]=s.split(':');return React.createElement('a',{key:i,href:'#'+r,onClick:(e)=>{e.preventDefault();this.go(r);},style:{color:rt===r?'var(--color-accent)':'inherit',textDecoration:'none',padding:'11px 0',borderBottom:'1px solid var(--color-divider)',cursor:'pointer'}},l);}),
+          React.createElement('a',{className:'btn btn-primary',href:'#',onClick:(e)=>{e.preventDefault();this.go('contact');},style:{marginTop:'12px'}},'Enquire now'))));
+  }
+
+  // ---------- FOOTER ----------
+  footer(){
+    const flink = (l,r,a)=>React.createElement('a',{href:'#'+r,onClick:(e)=>{e.preventDefault();this.go(r,a);},style:{color:'var(--color-neutral-200)',textDecoration:'none',fontSize:'14px',cursor:'pointer'}},l);
+    return React.createElement('footer',{style:{background:'var(--color-neutral-900)',color:'var(--color-neutral-200)'}},
+      React.createElement('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,72px) var(--space-4) 32px',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'var(--space-6)'}},
+        React.createElement('div',{},
+          React.createElement('div',{style:{display:'flex',alignItems:'center',gap:'11px'}}, React.createElement('span',{style:{display:'inline-flex',color:'var(--color-accent-300)'}}, this.mark('light')), React.createElement('span',{style:{fontFamily:'var(--font-heading)',fontSize:'19px',color:'#fff'}},'Mulanje Outlook')),
+          React.createElement('p',{style:{fontSize:'14px',lineHeight:1.6,marginTop:'16px',maxWidth:'34ch',color:'var(--color-neutral-300)'}},'Explore Mount Mulanje. Discover Southern Malawi. Experience the Warm Heart of Africa.')),
+        React.createElement('div',{},
+          React.createElement('h6',{style:{color:'var(--color-neutral-400)',marginBottom:'14px'}},'Explore'),
+          React.createElement('div',{style:{display:'flex',flexDirection:'column',gap:'10px'}}, flink('About us','about'), flink('Destinations','destinations'), flink('Popular tours','tours'), flink('Activities','activities'), flink('Gallery','gallery'), flink('Contact','contact'))),
+        React.createElement('div',{},
+          React.createElement('h6',{style:{color:'var(--color-neutral-400)',marginBottom:'14px'}},'Contact'),
+          React.createElement('div',{style:{display:'flex',flexDirection:'column',gap:'10px',fontSize:'14px',color:'var(--color-neutral-300)'}},
+            React.createElement('span',{},'+265 000 000 000'), React.createElement('span',{},'info@mulanjeoutlook.com'), React.createElement('span',{},'Likhubula, Mulanje, Malawi')))),
+      React.createElement('div',{style:{borderTop:'1px solid var(--color-neutral-800)'}},
+        React.createElement('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'20px var(--space-4)',display:'flex',flexWrap:'wrap',gap:'10px',justifyContent:'space-between',fontSize:'12.5px',color:'var(--color-neutral-400)'}},
+          React.createElement('span',{},'\u00A9 2026 Mulanje Outlook Travel & Safaris'), React.createElement('span',{},'Locally owned & managed in Malawi'))));
+  }
+
+  // ---------- HOME ----------
+  homePage(){
+    const mobile = this.state.w < 860;
+    const H=this.h.bind(this), P=this.htmlP.bind(this), IMG=this.img.bind(this);
+    const captions=['Mount Mulanje massif','Lake Malawi shoreline','Liwonde National Park'];
+    const heroImgs=['photos/mulanje-hero.jpg','photos/lake-beach.jpg','photos/elephant.jpg'];
+    const heroSplit = H('section',{style:{position:'relative',background:'var(--color-accent-100)'}},
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',display:'grid',gridTemplateColumns:mobile?'1fr':'1.05fr .95fr',gap:'var(--space-8)',alignItems:'center',padding:'clamp(40px,6vw,86px) var(--space-4)'}},
+        H('div',{style:{animation:'moslideup .7s ease both'}},
+          H('span',{className:'tag tag-accent-2',style:{marginBottom:'20px'}},'The Warm Heart of Africa'),
+          H('h1',{style:{fontSize:'clamp(38px,5.4vw,66px)',lineHeight:1.02,margin:'16px 0 0',letterSpacing:'-.02em'}},'Explore Mount Mulanje. Discover Southern Malawi.'),
+          H('p',{style:{fontSize:'clamp(16px,1.4vw,19px)',lineHeight:1.6,maxWidth:'46ch',margin:'22px 0 0',color:'color-mix(in srgb, var(--color-text) 78%, transparent)'}},'A locally owned tour operator crafting authentic mountain treks, wildlife safaris, tea-estate walks and lakeside escapes across the south of Malawi.'),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'12px',marginTop:'32px'}},
+            H('a',{className:'btn btn-primary',href:'#tour',onClick:(e)=>{e.preventDefault();this.go('tour');},style:{padding:'13px 26px',fontSize:'15px',cursor:'pointer'}},'Browse tours'),
+            H('a',{className:'btn btn-secondary',href:'#experiences',onClick:(e)=>{e.preventDefault();this.go('home','experiences');},style:{padding:'13px 26px',fontSize:'15px',cursor:'pointer'}},'What we offer')),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'26px',marginTop:'40px'}},
+            [['3,002m','Summit of Sapitwa'],['1\u201310','Day tailored tours'],['100%','Locally owned & guided']].map((s,i)=>
+              H('div',{key:i}, H('div',{style:{fontFamily:'var(--font-heading)',fontSize:'30px',color:'var(--color-accent-700)'}},s[0]), H('div',{style:{fontSize:'12.5px',color:'color-mix(in srgb, var(--color-text) 60%, transparent)'}},s[1]))))),
+        H('div',{style:{position:'relative',aspectRatio:'4/5',borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-lg)'}},
+          heroImgs.map((im,i)=>H('img',{key:i,src:IMG(im),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',transition:'opacity 1s ease',opacity:this.state.hero===i?1:0}})),
+          H('div',{style:{position:'absolute',left:0,right:0,bottom:0,padding:'22px',background:'linear-gradient(to top, color-mix(in srgb, #201e1d 72%, transparent), transparent)',color:'#fff',display:'flex',gap:'8px',alignItems:'center'}},
+            this.ic(['M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z'],16,'#fff'), H('span',{style:{fontSize:'13.5px'}},captions[this.state.hero]),
+            H('span',{style:{marginLeft:'auto',display:'flex',gap:'6px'}}, [0,1,2].map(i=>H('span',{key:i,style:{width:this.state.hero===i?'18px':'6px',height:'6px',borderRadius:'999px',background:'#fff',opacity:this.state.hero===i?1:.5,transition:'all .3s ease'}})))))));
+
+    const heroImmersive = H('section',{style:{position:'relative',minHeight:mobile?'auto':'86vh',display:'flex',alignItems:'flex-end',overflow:'hidden'}},
+      heroImgs.map((im,i)=>H('img',{key:i,className:'mo-photo',src:IMG(im),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',transition:'opacity 1s ease',opacity:this.state.hero===i?1:0}})),
+      H('div',{style:{position:'absolute',inset:0,background:'linear-gradient(to top, color-mix(in srgb,#201e1d 86%,transparent), color-mix(in srgb,#201e1d 28%,transparent) 55%, color-mix(in srgb,#201e1d 42%,transparent))'}}),
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',width:'100%',padding:'clamp(48px,8vw,110px) var(--space-4)',color:'#fff'}},
+        H('span',{className:'tag tag-accent-2',style:{marginBottom:'20px'}},'The Warm Heart of Africa'),
+        H('h1',{style:{fontSize:'clamp(40px,6.4vw,80px)',lineHeight:1.0,margin:'16px 0 0',letterSpacing:'-.02em',color:'#fff',maxWidth:'15ch'}},'Explore Mount Mulanje. Discover Southern Malawi.'),
+        H('p',{style:{fontSize:'clamp(16px,1.5vw,20px)',lineHeight:1.6,maxWidth:'52ch',margin:'22px 0 0',color:'rgba(255,255,255,.9)'}},'A locally owned tour operator crafting authentic mountain treks, wildlife safaris, tea-estate walks and lakeside escapes across the south of Malawi.'),
+        H('div',{style:{display:'flex',flexWrap:'wrap',gap:'12px',marginTop:'32px'}},
+          H('a',{className:'btn btn-primary',href:'#tours',onClick:(e)=>{e.preventDefault();this.go('tours');},style:{padding:'13px 26px',fontSize:'15px',cursor:'pointer'}},'Browse tours'),
+          H('a',{className:'btn btn-secondary',href:'#experiences',onClick:(e)=>{e.preventDefault();this.go('home','experiences');},style:{padding:'13px 26px',fontSize:'15px',cursor:'pointer',background:'rgba(255,255,255,.14)',color:'#fff',borderColor:'transparent'}},'What we offer')),
+        H('div',{style:{display:'flex',flexWrap:'wrap',gap:'32px',marginTop:'40px'}},
+          [['3,002m','Summit of Sapitwa'],['1-10','Day tailored tours'],['100%','Locally owned & guided']].map((s,i)=>H('div',{key:i}, H('div',{style:{fontFamily:'var(--font-heading)',fontSize:'30px',color:'#fff'}},s[0]), H('div',{style:{fontSize:'12.5px',color:'rgba(255,255,255,.7)'}},s[1]))))));
+    const hero = ((this.state.uiHero||this.props.heroStyle)==='Immersive') ? heroImmersive : heroSplit;
+
+    const welcome = H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,96px) var(--space-4)'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1.1fr',gap:'clamp(32px,5vw,72px)',alignItems:'center'}},
+        H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-md)'}}, H('img',{className:'washed mo-photo',src:IMG('photos/team.jpg'),style:{width:'100%',height:'100%',objectFit:'cover',aspectRatio:'5/4'}})),
+        H('div',{},
+          H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Welcome'),
+          H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0',maxWidth:'18ch'}},'A deeper way to experience Malawi'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'20px',color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},'Nestled beneath the majestic peaks of Mount Mulanje, we create unforgettable journeys throughout Southern Malawi - a land of dramatic mountains, abundant wildlife, rolling tea estates, and the world-famous hospitality that earned Malawi its name.'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},'Every journey is designed with care, combining adventure, comfort, and meaningful connections with nature and local communities.'),
+          H('a',{className:'btn btn-ghost',href:'#destinations',onClick:(e)=>{e.preventDefault();this.go('destinations');},style:{fontSize:'15px',marginTop:'6px',cursor:'pointer'}},'Meet our destinations ', this.ic(['M5 12h14','m12 5 7 7-7 7'],17)))));
+
+    const why=[
+      ['Experienced local guides','Years spent leading treks on Mount Mulanje and safaris across the south.',['M6 3v18','M6 8h9l-2.5 3L15 14H6']],
+      ['Tailored itineraries','Carefully planned trips shaped around your interests, pace and budget.',['M8 2v4','M16 2v4','M3 10h18','M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z']],
+      ['Safe & professional','Reliable service, trusted equipment and porters on every mountain trip.',['M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z','m9 12 2 2 4-4']],
+      ['Comfortable transport','Vehicle transfers and trusted lodges and mountain huts throughout.',['M5 17h14','M3 12h18l-2-6H5z','M7.5 12a1 1 0 1 0 0 .1','M16.5 12a1 1 0 1 0 0 .1']],
+      ['Responsible tourism','Every trip supports local communities and protects the environment.',['M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z','M2 21c0-3 1.85-5.36 5.08-6']],
+      ['Exceptional value','Memorable experiences and genuine hospitality from first enquiry to farewell.',['m12 2 2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6z']],
+    ];
+    const whySec = H('section',{style:{background:'var(--color-surface)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,90px) var(--space-4)'}},
+        H('div',{style:{maxWidth:'60ch'}}, H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Why travel with us'), H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0'}},'Built on local knowledge and genuine hospitality')),
+        H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:'var(--space-4)',marginTop:'44px'}},
+          why.map((c,i)=>H('div',{key:i,className:'card elev-sm',style:{background:'var(--color-bg)',padding:'26px',gap:0}},
+            H('div',{style:{width:'48px',height:'48px',borderRadius:'50%',background:'var(--color-accent-100)',display:'grid',placeItems:'center',color:'var(--color-accent-700)',marginBottom:'16px'}}, this.ic(c[2],22)),
+            H('h4',{style:{fontSize:'19px',margin:'0 0 8px'}},c[0]), H('p',{style:{fontSize:'14px',lineHeight:1.55,margin:0,color:'color-mix(in srgb, var(--color-text) 72%, transparent)'}},c[1]))))));
+
+    const exps=[
+      ['Mount Mulanje trekking','photos/mulanje-peaks.jpg','Guided treks for every level - from gentle day walks to the summit of Sapitwa, Malawi\u2019s highest peak at 3,002m.','Hiking'],
+      ['Wildlife safaris','photos/elephant2.jpg','Game drives, boat and walking safaris in Liwonde, Majete and Lengwe - elephants, big cats, hippos and hundreds of birds.','Safari'],
+      ['Tea estate tours','photos/tea-picker.jpg','Walk the rolling plantations of Mulanje and Thyolo and learn how Malawi\u2019s tea is grown and made.','Culture'],
+      ['Cultural experiences','photos/village-dance.jpg','Village visits, traditional music and dance, local cuisine and craft markets - respectful and authentic.','People'],
+      ['Lake Malawi adventures','photos/lake-beach.jpg','Swim, kayak, snorkel or take a sunset cruise on the crystal waters of the \u201cLake of Stars.\u201d','Water'],
+    ];
+    const expSec = H('section',{id:'experiences',style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,96px) var(--space-4)',scrollMarginTop:'90px'}},
+      H('div',{style:{display:'flex',flexWrap:'wrap',alignItems:'end',gap:'20px',justifyContent:'space-between'}},
+        H('div',{style:{maxWidth:'52ch'}}, H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Our experiences'), H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0'}},'Five ways to discover the south')),
+        H('a',{className:'btn btn-secondary',href:'#destinations',onClick:(e)=>{e.preventDefault();this.go('destinations');},style:{padding:'11px 20px',cursor:'pointer'}},'All destinations')),
+      H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:'var(--space-4)',marginTop:'44px'}},
+        exps.map((e,i)=>H('a',{key:i,href:'#destinations',onClick:(ev)=>{ev.preventDefault();this.go('destinations');},className:'mo-xcard mo-zoom',style:{textDecoration:'none',color:'inherit',display:'flex',flexDirection:'column',borderRadius:'var(--radius-lg)',overflow:'hidden',background:'var(--color-surface)',boxShadow:'var(--shadow-sm)',cursor:'pointer'}},
+          H('div',{style:{aspectRatio:'4/3',overflow:'hidden'}}, H('img',{className:'mo-photo',src:IMG(e[1]),style:{width:'100%',height:'100%',objectFit:'cover'}})),
+          H('div',{style:{padding:'22px'}}, H('span',{className:'tag tag-accent-2',style:{marginBottom:'12px'}},e[3]), H('h3',{style:{fontSize:'22px',margin:'12px 0 8px'}},e[0]), H('p',{style:{fontSize:'14px',lineHeight:1.55,margin:0,color:'color-mix(in srgb, var(--color-text) 72%, transparent)'}},e[2]))))));
+
+    const tours=[
+      ['3-Day Mount Mulanje Trek','photos/summit-sign.jpg','A rewarding climb to Sapitwa Peak with mountain-hut nights, guides, porters and breathtaking views.','Grade 4 \u00b7 3 days','from $390'],
+      ['6-Day Southern Malawi Tour','photos/mulanje-view.jpg','Mount Mulanje, Zomba, Liwonde safari and Lake Malawi combined into one unforgettable journey.','Signature \u00b7 6 days','from $1,140'],
+      ['Liwonde Wildlife Safari','photos/hippos.jpg','Exciting game drives and peaceful boat safaris along the mighty Shire River.','Safari \u00b7 2\u20133 days','from $310'],
+      ['Tea & Culture Experience','photos/tea-mountain.jpg','Historic tea estates followed by village visits and the warm traditions of local communities.','Relaxed \u00b7 2 days','from $180'],
+    ];
+    const tourSec = H('section',{style:{background:'var(--color-accent-2-100)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,96px) var(--space-4)'}},
+        H('div',{style:{maxWidth:'56ch'}}, H('span',{className:'card-kicker',style:{fontSize:'11px',color:'var(--color-accent-2-700)'}},'Popular tours'), H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0'}},'Journeys our guests love most'), H('p',{style:{fontSize:'16px',marginTop:'14px',color:'color-mix(in srgb, var(--color-text) 75%, transparent)'}},'Every itinerary is a starting point - tell us your dates, interests and budget and we\u2019ll shape it around you.')),
+        H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'var(--space-4)',marginTop:'44px'}},
+          tours.map((t,i)=>H('a',{key:i,href:'#tour',onClick:(e)=>{e.preventDefault();this.go('tour');},className:'mo-xcard mo-zoom',style:{textDecoration:'none',color:'inherit',display:'flex',flexDirection:'column',borderRadius:'var(--radius-lg)',overflow:'hidden',background:'var(--color-bg)',boxShadow:'var(--shadow-sm)',cursor:'pointer'}},
+            H('div',{style:{aspectRatio:'3/2',overflow:'hidden',position:'relative'}}, H('img',{className:'mo-photo',src:IMG(t[1]),style:{width:'100%',height:'100%',objectFit:'cover'}}), H('span',{style:{position:'absolute',top:'14px',right:'14px',background:'var(--color-bg)',color:'var(--color-accent-700)',fontFamily:'var(--font-heading)',fontSize:'13px',padding:'6px 13px',borderRadius:'999px',boxShadow:'var(--shadow-sm)'}},t[4])),
+            H('div',{style:{padding:'20px',display:'flex',flexDirection:'column',flex:1}}, H('span',{style:{fontSize:'11px',letterSpacing:'.06em',textTransform:'uppercase',color:'var(--color-accent-700)'}},t[3]), H('h3',{style:{fontSize:'20px',margin:'8px 0 8px'}},t[0]), H('p',{style:{fontSize:'13.5px',lineHeight:1.5,margin:'0 0 16px',color:'color-mix(in srgb, var(--color-text) 72%, transparent)',flex:1}},t[2]), H('span',{className:'btn btn-ghost',style:{alignSelf:'flex-start',padding:0}},'View itinerary \u2192')))))));
+
+    const commit = H('section',{className:'mo-zoom',style:{position:'relative',overflow:'hidden'}},
+      H('img',{className:'mo-photo',src:IMG('photos/tea-mountain.jpg'),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}),
+      H('div',{style:{position:'absolute',inset:0,background:'linear-gradient(105deg, color-mix(in srgb,#201e1d 82%,transparent) 0%, color-mix(in srgb,#201e1d 55%,transparent) 55%, transparent 100%)'}}),
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',padding:'clamp(64px,8vw,120px) var(--space-4)'}},
+        H('div',{style:{maxWidth:'52ch',color:'#fff'}},
+          H('span',{className:'card-kicker',style:{fontSize:'11px',color:'var(--color-accent-300)'}},'Our commitment'),
+          H('h2',{style:{fontSize:'clamp(28px,3.6vw,44px)',margin:'12px 0 0',color:'#fff'}},'Responsible tourism that gives back'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'18px',color:'rgba(255,255,255,.9)'}},'By travelling with us you help create sustainable opportunities for local families while preserving the landscapes and traditions that make Malawi unique. We support local businesses, protect the natural environment, and deliver professional guiding on every trip.'),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'10px',marginTop:'26px'}}, ['Local guides & porters','Community visits','Conservation partners'].map((t,i)=>H('span',{key:i,className:'tag',style:{background:'rgba(255,255,255,.15)',color:'#fff',padding:'6px 14px'}},t))))));
+
+    const enquire = this.enquireBlock('home');
+    return H('div',{}, hero, welcome, whySec, expSec, tourSec, commit, enquire);
+  }
+
+  enquireBlock(context){
+    const H=this.h.bind(this);
+    return H('section',{id:'enquire',style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,96px) var(--space-4)',scrollMarginTop:'90px'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:this.state.w<860?'1fr':'1fr 1.15fr',gap:'clamp(32px,5vw,64px)',alignItems:'start'}},
+        H('div',{},
+          H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Begin your adventure'),
+          H('h2',{style:{fontSize:'clamp(28px,3.4vw,42px)',margin:'10px 0 0',maxWidth:'16ch'}},'Tell us the trip you\u2019re dreaming of'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'18px',color:'color-mix(in srgb, var(--color-text) 78%, transparent)',maxWidth:'44ch'}},'From your first enquiry until your journey ends, our goal is to make your visit enjoyable, seamless and inspiring. Send us a message and a local expert will reply personally.'),
+          H('div',{style:{display:'flex',flexDirection:'column',gap:'14px',marginTop:'28px'}},
+            [[['M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z'],'Call or WhatsApp','+265 000 000 000'],
+             [['M2 4h20v16H2z','m22 7-10 5L2 7'],'Email','info@mulanjeoutlook.com'],
+             [['M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z','M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'],'Based in','Likhubula, Mulanje']].map((c,i)=>
+              H('div',{key:i,style:{display:'flex',alignItems:'center',gap:'13px'}},
+                H('span',{style:{width:'44px',height:'44px',borderRadius:'50%',background:'var(--color-accent-100)',display:'grid',placeItems:'center',color:'var(--color-accent-700)',flex:'none'}}, this.ic(c[0],19)),
+                H('span',{}, H('span',{style:{display:'block',fontSize:'12px',color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},c[1]), H('span',{style:{fontSize:'16px',fontFamily:'var(--font-heading)'}},c[2])))))),
+        H('form',{onSubmit:(e)=>{e.preventDefault();alert('Thank you! This is a mockup - your enquiry would be sent to Mulanje Outlook Safaris.');},style:{background:'var(--color-surface)',borderRadius:'var(--radius-lg)',padding:'clamp(24px,3vw,36px)',boxShadow:'var(--shadow-md)'}},
+          H('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px'}},
+            H('div',{className:'field'}, H('label',{},'Full name'), H('input',{className:'input',placeholder:'Your name'})),
+            H('div',{className:'field'}, H('label',{},'Email'), H('input',{className:'input',type:'email',placeholder:'you@email.com'}))),
+          H('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginTop:'16px'}},
+            H('div',{className:'field'}, H('label',{},'Interested in'), H('select',{className:'input',style:{appearance:'none'}}, ['Mount Mulanje trek','Wildlife safari','Southern Malawi tour','Tea & culture','Lake Malawi','Not sure yet'].map((o,i)=>H('option',{key:i},o)))),
+            H('div',{className:'field'}, H('label',{},'Approx. dates'), H('input',{className:'input',placeholder:'e.g. June 2026'}))),
+          H('div',{className:'field',style:{marginTop:'16px'}}, H('label',{},'Tell us more'), H('textarea',{className:'input',placeholder:'Group size, interests, how long you have\u2026'})),
+          H('button',{type:'submit',className:'btn btn-primary btn-block',style:{padding:'13px',fontSize:'15px',marginTop:'20px'}},'Send enquiry'),
+          H('p',{style:{fontSize:'12px',textAlign:'center',margin:'12px 0 0',color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},'We reply personally within 24 hours.'))));
+  }
+
+  // ---------- DESTINATIONS ----------
+  destPage(){
+    const mobile=this.state.w<900; const H=this.h.bind(this), IMG=this.img.bind(this);
+    const data=[
+      {id:'mulanje',kicker:'UNESCO Biosphere Reserve',name:'Mount Mulanje',img:['photos/mulanje-peaks.jpg','photos/rock-pool.jpg','photos/hikers-valley.jpg'],lead:'Rising almost abruptly from a featureless plain, Mulanje is the third-largest mountain in Africa - a 640 km\u00b2 massif blessed with 13 sister peaks. Sapitwa, at 3,002m, is the highest point in Central Africa, with views stretching to Lake Chirwa, Zomba and Mozambique.',body:'A network of well-weathered trails connects the mountain huts, with detours to peaks, rock pools and sunset viewpoints. Our 1\u20136 day itineraries cover all the key areas of interest - the most popular being the sunrise summit challenge.',acts:['Multi-day hiking','Zip-line river crossing','Top-rope climbing & abseiling','Tea field & factory tour'],price:'from $130 / day'},
+      {id:'liwonde',kicker:'Managed by African Parks',name:'Liwonde National Park',img:['photos/elephant.jpg','photos/hippos.jpg','photos/boat-safari.jpg'],lead:'One of the most accessible and professionally run parks in the south. The mighty Shire River and cathedral-like mopane woodlands make it a perfect habitat for the endangered black rhino, thriving elephant, buffalo and sable antelope.',body:'Rich in birdlife - including Pel\u2019s fishing owl and Lilian\u2019s lovebird. Take a 3-hour boat trip to see elephants, hippos and crocodiles up close, a 4x4 game drive along the spinal route, or a nocturnal drive to watch the big cats hunt.',acts:['4x4 game drives','Boat safari on the Shire','Walking safari','Conservation experiences'],price:'from $155 / day'},
+      {id:'lake',kicker:'UNESCO World Heritage Site',name:'Lake Malawi - Southern Shores',img:['photos/lake-beach.jpg','photos/lake-sunset.jpg','photos/lake-boat.jpg'],lead:'The \u201cLake of Stars\u201d is our main draw for anyone passing through the south - limitless watersports along expansive sandy beaches. Declared a UNESCO World Heritage Site in 1984 for its extraordinary diversity of cichlid fish.',body:'Cape Maclear, a small fishing village within the national park, is the hub. The crystal waters around Domwe, Thumbi and Mumbo islands offer private snorkelling and kayaking, while a late-afternoon walk to Otters Point reveals the lake turning gold at sunset.',acts:['Sailing to the islands','Snorkelling & kayaking','Sunset boat cruise','Beach volleyball','Village tour'],price:'from $95 / day'},
+      {id:'majete',kicker:'Big Five \u00b7 African Parks',name:'Majete Game Reserve',img:['photos/kudu.jpg','photos/antelope.jpg','photos/safari-vehicle.jpg'],lead:'Just 90 minutes from Blantyre and home to Africa\u2019s Big Five, Majete has the highest concentration of predators in Malawi - hyena, leopard, cheetah, wild dog and several prides of lion. Your chances of a sighting are almost certain.',body:'As a non-profit, all funds generated in Majete support the reserve and the families who manage it. We recommend Thawale Lodge, where animals roam freely among guests, or the memorable Nakambe Hide sleep-out for the truly adventurous.',acts:['Morning & afternoon game drives','Nakambe Hide sleep-out','Cultural dancing'],price:'from $145 / day'},
+      {id:'zomba',kicker:'Plateau & city gateway',name:'Zomba Plateau & Blantyre',img:['photos/sunset-tree.jpg','photos/mulanje-view.jpg','photos/tea-estate.jpg'],lead:'A scenic bridge between mountain and lake. Zomba Plateau offers cool forest drives, trout streams and the celebrated Queen\u2019s View sunset point, while Blantyre - Malawi\u2019s commercial heart - is the arrival gateway for most journeys.',body:'We often break the drive here for a sunrise stroll or a visit to a curio market, weaving Zomba into longer itineraries as a restful counterpoint between the summit and the Shire.',acts:['Forest & viewpoint drives','Queen\u2019s View sunset','City & market tour'],price:'included in tours'},
+    ];
+    const hero = H('section',{style:{position:'relative',overflow:'hidden'}},
+      H('img',{src:IMG('photos/mulanje-boulders.jpg'),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}),
+      H('div',{style:{position:'absolute',inset:0,background:'linear-gradient(to top, color-mix(in srgb,#201e1d 82%,transparent), color-mix(in srgb,#201e1d 30%,transparent) 60%, color-mix(in srgb,#201e1d 45%,transparent))'}}),
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',padding:'clamp(64px,9vw,120px) var(--space-4) clamp(48px,6vw,80px)',color:'#fff'}},
+        H('span',{className:'tag tag-accent-2',style:{marginBottom:'16px'}},'Southern Malawi'),
+        H('h1',{style:{fontSize:'clamp(38px,5.6vw,64px)',lineHeight:1.02,margin:'16px 0 0',maxWidth:'16ch',color:'#fff',letterSpacing:'-.02em'}},'Five extraordinary destinations, close enough to combine'),
+        H('p',{style:{fontSize:'clamp(16px,1.5vw,19px)',lineHeight:1.6,maxWidth:'56ch',margin:'20px 0 0',color:'rgba(255,255,255,.9)'}},'We run all-inclusive 1\u201310 day tours that sample the best of the region - demanding mountain traverses, Big Five safaris, tea-estate walks and the crystal shores of Lake Malawi. Because our destinations sit a short distance apart, you spend more time enjoying them and less time travelling.')));
+    const quicknav = H('section',{style:{background:'var(--color-surface)',borderBottom:'1px solid var(--color-divider)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'18px var(--space-4)',display:'flex',flexWrap:'wrap',gap:'10px'}},
+        data.map((d,i)=>H('a',{key:i,href:'#'+d.id,onClick:(e)=>{e.preventDefault();const el=document.getElementById(d.id);if(el)el.scrollIntoView({behavior:'smooth'});},style:{textDecoration:'none'}}, H('span',{className:'tag tag-outline',style:{padding:'7px 15px',cursor:'pointer'}},d.name)))));
+    const chip=(t)=>H('span',{key:t,className:'tag tag-accent',style:{padding:'6px 13px',fontSize:'12px'}},t);
+    const row=(d,i)=>{
+      const reverse=i%2===1&&!mobile;
+      const media=H('div',{style:{display:'grid',gridTemplateColumns:'2fr 1fr',gridTemplateRows:'1fr 1fr',gap:'10px',height:mobile?'auto':'440px'}},
+        H('div',{className:'mo-zoom',style:{gridRow:'span 2',borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-md)',minHeight:mobile?'240px':'auto'}}, H('img',{className:'mo-photo',src:IMG(d.img[0]),style:{width:'100%',height:'100%',objectFit:'cover'}})),
+        H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-md)',overflow:'hidden',minHeight:mobile?'130px':'auto'}}, H('img',{className:'mo-photo',src:IMG(d.img[1]),style:{width:'100%',height:'100%',objectFit:'cover'}})),
+        H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-md)',overflow:'hidden',minHeight:mobile?'130px':'auto'}}, H('img',{className:'mo-photo',src:IMG(d.img[2]),style:{width:'100%',height:'100%',objectFit:'cover'}})));
+      const text=H('div',{},
+        H('span',{className:'card-kicker',style:{fontSize:'11px'}},d.kicker),
+        H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0'}},d.name),
+        H('p',{style:{fontSize:'16px',lineHeight:1.62,marginTop:'16px',color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},d.lead),
+        H('p',{style:{fontSize:'15px',lineHeight:1.62,color:'color-mix(in srgb, var(--color-text) 72%, transparent)'}},d.body),
+        H('div',{style:{display:'flex',flexWrap:'wrap',gap:'8px',margin:'20px 0 0'}},d.acts.map(chip)),
+        H('div',{style:{display:'flex',flexWrap:'wrap',alignItems:'center',gap:'16px',marginTop:'26px'}},
+          H('a',{className:'btn btn-primary',href:'#tour',onClick:(e)=>{e.preventDefault();this.go('tour');},style:{padding:'12px 22px',cursor:'pointer'}},'Plan a visit'),
+          H('span',{style:{fontFamily:'var(--font-heading)',fontSize:'17px',color:'var(--color-accent-700)'}},d.price)));
+      return H('section',{key:d.id,id:d.id,style:{scrollMarginTop:'80px',display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1fr',gap:'clamp(28px,4vw,60px)',alignItems:'center',padding:'clamp(36px,5vw,64px) 0',borderTop:i===0?'none':'1px solid var(--color-divider)'}}, reverse?text:media, reverse?media:text);
+    };
+    const rows = H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(40px,6vw,80px) var(--space-4)'}}, data.map(row));
+    const cta = H('section',{style:{background:'var(--color-accent-100)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,80px) var(--space-4)',display:'flex',flexWrap:'wrap',alignItems:'center',gap:'24px',justifyContent:'space-between'}},
+        H('div',{style:{maxWidth:'44ch'}}, H('h2',{style:{fontSize:'clamp(26px,3.2vw,38px)',margin:0}},'Mix any of these into one seamless journey'), H('p',{style:{fontSize:'16px',marginTop:'12px',color:'color-mix(in srgb, var(--color-text) 75%, transparent)'}},'Tell us how long you have and what you love. We\u2019ll match the time you have with the very best of the region.')),
+        H('div',{style:{display:'flex',gap:'12px',flexWrap:'wrap'}},
+          H('a',{className:'btn btn-primary',href:'#tour',onClick:(e)=>{e.preventDefault();this.go('tour');},style:{padding:'13px 24px',cursor:'pointer'}},'See a sample tour'),
+          H('a',{className:'btn btn-secondary',href:'#enquire',onClick:(e)=>{e.preventDefault();this.go('home','enquire');},style:{padding:'13px 24px',cursor:'pointer'}},'Plan my trip'))));
+    return H('div',{}, hero, quicknav, rows, cta);
+  }
+
+  // ---------- TOUR ----------
+  tourPage(){
+    const mobile=this.state.w<900; const H=this.h.bind(this), IMG=this.img.bind(this);
+    const T='color-mix(in srgb, var(--color-text) 74%, transparent)';
+    const hero = H('section',{style:{position:'relative',overflow:'hidden'}},
+      H('img',{src:IMG('photos/mulanje-view.jpg'),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}),
+      H('div',{style:{position:'absolute',inset:0,background:'linear-gradient(to top, color-mix(in srgb,#201e1d 85%,transparent), color-mix(in srgb,#201e1d 35%,transparent) 55%, color-mix(in srgb,#201e1d 40%,transparent))'}}),
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',padding:'clamp(64px,9vw,120px) var(--space-4) clamp(40px,5vw,64px)',color:'#fff'}},
+        H('a',{href:'#destinations',onClick:(e)=>{e.preventDefault();this.go('destinations');},style:{display:'inline-flex',alignItems:'center',gap:'7px',color:'rgba(255,255,255,.85)',textDecoration:'none',fontSize:'14px',marginBottom:'20px',cursor:'pointer'}}, this.ic(['M19 12H5','m12 19-7-7 7-7'],16,'currentColor'),' Destinations'),
+        H('div',{style:{display:'flex',flexWrap:'wrap',gap:'8px',marginBottom:'16px'}}, H('span',{className:'tag',style:{background:'var(--color-accent)',color:'#fff',padding:'6px 14px'}},'Signature journey'), H('span',{className:'tag',style:{background:'rgba(255,255,255,.16)',color:'#fff',padding:'6px 14px'}},'Mulanje \u00b7 Liwonde \u00b7 Lake Malawi')),
+        H('h1',{style:{fontSize:'clamp(36px,5.2vw,62px)',lineHeight:1.03,margin:0,maxWidth:'18ch',color:'#fff',letterSpacing:'-.02em'}},'6-Day Southern Malawi Tour'),
+        H('p',{style:{fontSize:'clamp(16px,1.5vw,19px)',lineHeight:1.6,maxWidth:'56ch',margin:'18px 0 0',color:'rgba(255,255,255,.9)'}},'Summit Sapitwa, safari the Shire River, and unwind on the shores of Lake Malawi - mountain, wildlife and water woven into one unforgettable week.'),
+        H('div',{style:{display:'flex',flexWrap:'wrap',gap:'26px',marginTop:'30px'}},
+          [[['M3 4h18v18H3z','M8 2v4M16 2v4M3 10h18'],'6 days / 5 nights'],[['m8 3 4 8 5-5 5 15H2L8 3z'],'Grade 4 \u00b7 challenging'],[['M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2','M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z','M22 21v-2a4 4 0 0 0-3-3.87'],'2\u20138 guests']].map((f,i)=>
+            H('div',{key:i,style:{display:'flex',alignItems:'center',gap:'9px'}}, this.ic(f[0],19,'var(--color-accent-300)'), H('span',{style:{fontSize:'15px'}},f[1]))))));
+
+    const hl=['Sunrise summit of Sapitwa (3,002m)','Dziwe Falls & mountain rock pools','Elephant Head sunset viewpoint','Boat safari on the Shire River','Big game in Liwonde National Park','Golden sunsets at Cape Maclear'];
+    const facts=[['Duration','6 days / 5 nights'],['Grade','4 - challenging'],['Group size','2\u20138 guests'],['Start','Blantyre'],['Finish','Cape Maclear, Lake Malawi'],['Meals','All included (B/L/D)']];
+    const intro = H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(40px,5vw,72px) var(--space-4)'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1.7fr 1fr',gap:'clamp(28px,4vw,52px)',alignItems:'start'}},
+        H('div',{},
+          H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Trip overview'),
+          H('h2',{style:{fontSize:'clamp(26px,3.2vw,36px)',margin:'10px 0 0'}},'The best of the south in one week'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'16px',color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},'This is our most complete journey - a demanding but deeply rewarding traverse of Mount Mulanje that culminates in a sunrise summit of Sapitwa, the highest peak in Central Africa, followed by a wildlife safari in Liwonde National Park and a restful finish on the golden shores of Lake Malawi.'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},'Every itinerary is a starting point. You\u2019re free to change routes, add nights, or swap accommodation to match your fitness, budget and the time you have. Your mountain guide and host will shape the trip around you - before you arrive and even during the hike.'),
+          H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:'14px',marginTop:'24px'}},
+            [['Highest point','Sapitwa 3,002m'],['Start / end','Blantyre \u2192 Lake'],['Best season','May \u2013 Oct']].map((c,i)=>H('div',{key:i,className:'card elev-sm',style:{background:'var(--color-surface)',padding:'18px',gap:'4px'}}, H('span',{style:{fontSize:'12px',color:'color-mix(in srgb, var(--color-text) 58%, transparent)'}},c[0]), H('span',{style:{fontFamily:'var(--font-heading)',fontSize:'22px'}},c[1])))),
+          H('h3',{style:{fontSize:'22px',margin:'34px 0 0'}},'Trip highlights'),
+          H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(230px,1fr))',gap:'12px 22px',marginTop:'16px'}},
+            hl.map((x,i)=>H('div',{key:i,style:{display:'flex',gap:'10px',alignItems:'flex-start'}}, H('span',{style:{color:'var(--color-accent-600)',flex:'none',marginTop:'2px'}}, this.ic(['M20 6 9 17l-5-5'],18)), H('span',{style:{fontSize:'14.5px',lineHeight:1.4}},x))))),
+        H('aside',{style:{position:mobile?'static':'sticky',top:'88px'}},
+          H('div',{className:'card elev-md',style:{background:'var(--color-bg)',padding:'26px',border:'1px solid var(--color-divider)'}},
+            H('span',{style:{fontSize:'13px',color:'color-mix(in srgb, var(--color-text) 58%, transparent)'}},'From, per person'),
+            H('div',{style:{display:'flex',alignItems:'baseline',gap:'8px',margin:'2px 0'}}, H('span',{style:{fontFamily:'var(--font-heading)',fontSize:'40px',color:'var(--color-accent-700)'}},'$1,140'), H('span',{style:{fontSize:'14px',color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},'/ 6 days')),
+            H('p',{style:{fontSize:'12.5px',color:'color-mix(in srgb, var(--color-text) 55%, transparent)',margin:'0 0 18px'}},'All-inclusive \u00b7 price varies with group size & chosen lodging.'),
+            H('div',{style:{display:'flex',flexDirection:'column',gap:'11px',padding:'16px 0',borderTop:'1px solid var(--color-divider)',borderBottom:'1px solid var(--color-divider)',marginBottom:'18px'}},
+              facts.map((f,i)=>H('div',{key:i,style:{display:'flex',justifyContent:'space-between',gap:'12px',fontSize:'14px'}}, H('span',{style:{color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},f[0]), H('span',{style:{fontWeight:600,textAlign:'right'}},f[1])))),
+            H('a',{className:'btn btn-primary btn-block',href:'#enquire',onClick:(e)=>{e.preventDefault();const el=document.getElementById('enquire');if(el)el.scrollIntoView({behavior:'smooth'});},style:{padding:'13px',fontSize:'15px',margin:0,cursor:'pointer'}},'Enquire about this tour'),
+            H('a',{className:'btn btn-secondary btn-block',href:'#enquire',onClick:(e)=>{e.preventDefault();const el=document.getElementById('enquire');if(el)el.scrollIntoView({behavior:'smooth'});},style:{padding:'13px',fontSize:'15px',cursor:'pointer'}},'Ask a question'),
+            H('p',{style:{fontSize:'12px',textAlign:'center',margin:'14px 0 0',color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},'No deposit to enquire \u00b7 reply within 24h')))));
+
+    const stops=[{x:70,y:150,n:1,label:'Blantyre',sub:'Arrival'},{x:210,y:110,n:2,label:'Mulanje',sub:'Base'},{x:340,y:60,n:3,label:'Sapitwa',sub:'3,002m'},{x:470,y:120,n:4,label:'Zomba',sub:'Plateau'},{x:610,y:95,n:5,label:'Liwonde',sub:'Safari'},{x:760,y:150,n:6,label:'Lake Malawi',sub:'Cape Maclear'}];
+    const routeMap=H('svg',{viewBox:'0 0 830 210',style:{width:'100%',minWidth:'720px',height:'auto',display:'block'}},
+      H('path',{d:'M70 150 Q140 90 210 110 T340 60 Q400 90 470 120 T610 95 Q690 110 760 150',fill:'none',stroke:'var(--color-accent-300)',strokeWidth:3,strokeDasharray:'2 9',strokeLinecap:'round'}),
+      stops.map((s,i)=>H('g',{key:i},
+        H('circle',{cx:s.x,cy:s.y,r:16,fill:'var(--color-accent)'}), H('circle',{cx:s.x,cy:s.y,r:16,fill:'none',stroke:'var(--color-bg)',strokeWidth:3}),
+        H('text',{x:s.x,y:s.y+5,textAnchor:'middle',fontFamily:'var(--font-heading)',fontSize:15,fill:'#fff'},s.n),
+        H('text',{x:s.x,y:s.y+38,textAnchor:'middle',fontFamily:'var(--font-heading)',fontSize:16,fill:'var(--color-text)'},s.label),
+        H('text',{x:s.x,y:s.y+55,textAnchor:'middle',fontFamily:'var(--font-body)',fontSize:11.5,fill:'color-mix(in srgb, var(--color-text) 55%, transparent)'},s.sub))));
+    const routeSec=H('section',{style:{background:'var(--color-accent-2-100)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(44px,5vw,72px) var(--space-4)'}},
+        H('div',{style:{maxWidth:'52ch',marginBottom:'28px'}}, H('span',{className:'card-kicker',style:{fontSize:'11px',color:'var(--color-accent-2-700)'}},'The route'), H('h2',{style:{fontSize:'clamp(26px,3.2vw,36px)',margin:'10px 0 0'}},'From the summit to the shore')),
+        H('div',{className:'card elev-sm',style:{background:'var(--color-bg)',padding:'clamp(18px,3vw,32px)',overflowX:'auto'}}, routeMap)));
+
+    const days=[
+      {d:1,t:'Arrival & warm-up at Mulanje',img:'photos/waterfall-pool.jpg',body:'Pick-up at Blantyre airport or Doogles Lodge and a direct transfer to Mulanje. Check in and settle at the lodge, then - depending on your arrival - a warm-up hike to nearby falls and rock pools, returning by sunset. A detailed briefing of the whole tour follows over dinner.',meta:[['drive','Drive 3 hrs'],['meal','Dinner'],['bed','Likhubula lodge']]},
+      {d:2,t:'Ascent to Chisepho Basin',img:'photos/hikers-trail.jpg',body:'Starting early, we ascend the fairly shaded but demanding skyline path, following the Likhubula River Gorge to its very source before traversing to Chisepho Forest Hut - our base camp for the summit bid. We arrive mid-afternoon with time to rest.',meta:[['hike','Hike 8 hrs'],['meal','Full board'],['bed','Chisepho Hut']]},
+      {d:3,t:'Summit Sapitwa \u00b7 3,002m',img:'photos/sapitwa.jpg',body:'A pre-dawn start for the summit of Sapitwa - the highest peak in Central Africa. On a clear day, views stretch to Zomba Plateau, Lake Chirwa and Mozambique\u2019s Milanje Mountain. We return to Chisepho for brunch, then traverse undulating terrain and mountain rainforest to Thuchira Hut, celebrating with sunset at Elephant Head viewpoint.',meta:[['hike','Hike 8 hrs'],['meal','Full board'],['bed','Thuchira Hut']]},
+      {d:4,t:'Descend to Zomba Plateau',img:'photos/mulanje-approach.jpg',body:'We descend to the pick-up point at Tinyade Estate via the shaded Namwali-Zaone trail along the Likulezi River, then transfer to Likhubula for a shower, lunch and debrief. We part with our mountain guides and drive on to Zomba Plateau, where an evening drive to the Queen\u2019s View sunset point is highly recommended.',meta:[['hike','Hike 4 hrs'],['drive','Drive 4 hrs'],['bed','Zomba Forest Lodge']]},
+      {d:5,t:'Into Liwonde National Park',img:'photos/elephant.jpg',body:'A morning stroll to catch sunrise at the nearby trout farm before breakfast, then a transfer to Liwonde National Park. We settle at Kuthengo Camp, set on the bank of the mighty Shire River, and head out on an evening game drive - you may even meet the park\u2019s newly introduced pride of cheetahs.',meta:[['drive','Drive 4+2 hrs'],['meal','Full board'],['bed','Kuthengo Camp']]},
+      {d:6,t:'Shire safari & Lake Malawi',img:'photos/lake-sunset.jpg',body:'After breakfast, a two-hour boat safari up the Shire brings you close to crocodiles, hippos and countless birds gathering at the banks. We then drive to Cape Maclear in Lake Malawi National Park, pausing at Mangochi fish market, arriving lakeside before sunset to begin your lakeside escape.',meta:[['drive','Drive 9 hrs'],['meal','Full board'],['bed','Cape Maclear']]},
+    ];
+    const metaIcon=(k)=>({drive:'M5 17h12l1-5H4l1 5zM6 12l1.5-4h9L18 12',hike:'m8 3 4 8 5-5 5 15H2L8 3z',meal:'M3 2v7c0 1.1.9 2 2 2h0V2M7 2v20M11 2v7c0 1.1-.9 2-2 2M18 2c-1.5 0-3 2-3 5s1 4 1 4v11',bed:'M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8M2 16h20M6 10V7a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3'})[k];
+    const timeline=H('div',{style:{position:'relative'}}, days.map((d,i)=>{
+      const isOpen=this.state.open===i;
+      return H('div',{key:i,style:{display:'grid',gridTemplateColumns:mobile?'40px 1fr':'56px 1fr',gap:mobile?'16px':'28px',position:'relative'}},
+        H('div',{style:{display:'flex',flexDirection:'column',alignItems:'center'}},
+          H('button',{type:'button',onClick:()=>this.setState({open:isOpen?-1:i}),style:{width:mobile?'40px':'52px',height:mobile?'40px':'52px',flex:'none',borderRadius:'50%',border:'none',cursor:'pointer',background:isOpen?'var(--color-accent)':'var(--color-surface)',color:isOpen?'#fff':'var(--color-accent-700)',fontFamily:'var(--font-heading)',fontSize:mobile?'15px':'19px',boxShadow:'var(--shadow-sm)',transition:'all .25s ease'}},d.d),
+          i<days.length-1 && H('div',{style:{width:'2px',flex:1,minHeight:'28px',background:'var(--color-divider)',margin:'6px 0'}})),
+        H('div',{style:{paddingBottom:'26px',minWidth:0}},
+          H('button',{type:'button',onClick:()=>this.setState({open:isOpen?-1:i}),style:{width:'100%',textAlign:'left',background:'none',border:'none',cursor:'pointer',padding:0,display:'flex',alignItems:'center',gap:'12px'}},
+            H('div',{style:{flex:1}}, H('span',{style:{fontSize:'11px',letterSpacing:'.08em',textTransform:'uppercase',color:'var(--color-accent-700)'}},'Day '+d.d), H('h3',{style:{fontSize:mobile?'19px':'23px',margin:'3px 0 0',lineHeight:1.15}},d.t)),
+            H('span',{style:{flex:'none',color:'color-mix(in srgb, var(--color-text) 50%, transparent)',transform:isOpen?'rotate(180deg)':'none',transition:'transform .25s ease'}}, this.ic(['m6 9 6 6 6-6'],22))),
+          isOpen && H('div',{style:{marginTop:'16px',animation:'moslideup .35s ease both'}},
+            H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1.4fr 1fr',gap:'20px',alignItems:'stretch'}},
+              H('div',{}, H('p',{style:{fontSize:'15px',lineHeight:1.62,margin:0,color:T}},d.body),
+                H('div',{style:{display:'flex',flexWrap:'wrap',gap:'8px',marginTop:'16px'}}, d.meta.map((m,j)=>H('span',{key:j,className:'tag tag-neutral',style:{display:'inline-flex',alignItems:'center',gap:'6px',padding:'6px 12px'}}, this.ic([metaIcon(m[0])],14,'var(--color-accent-700)'), m[1])))),
+              H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-md)',minHeight:'160px',boxShadow:'var(--shadow-sm)'}}, H('img',{className:'mo-photo',src:IMG(d.img),style:{width:'100%',height:'100%',objectFit:'cover'}}))))));
+    }));
+    const itinSec=H('section',{style:{maxWidth:'1000px',margin:'0 auto',padding:'clamp(52px,6vw,88px) var(--space-4)'}},
+      H('div',{style:{textAlign:'center',maxWidth:'52ch',margin:'0 auto 48px'}}, H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Day by day'), H('h2',{style:{fontSize:'clamp(28px,3.4vw,42px)',margin:'10px 0 0'}},'Your itinerary, hour by hour'), H('p',{style:{fontSize:'16px',marginTop:'14px',color:'color-mix(in srgb, var(--color-text) 75%, transparent)'}},'Six days of mountain, wildlife and water. Meals shown as B / L / D.')),
+      timeline);
+
+    const mk=(arr,col,glyph)=>arr.map((t,i)=>H('div',{key:i,style:{display:'flex',gap:'10px',alignItems:'flex-start',fontSize:'15px',lineHeight:1.45}}, H('span',{style:{flex:'none',marginTop:'3px',color:col}}, this.ic([glyph],15)), H('span',{},t)));
+    const inclSec=H('section',{style:{background:'var(--color-surface)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,80px) var(--space-4)'}},
+        H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1fr',gap:'clamp(24px,3vw,44px)'}},
+          H('div',{}, H('h3',{style:{fontSize:'24px',margin:'0 0 18px',display:'flex',alignItems:'center',gap:'10px'}}, H('span',{style:{color:'var(--color-accent-2-700)'}}, this.ic(['M20 6 9 17l-5-5'],22)),'What\u2019s included'),
+            H('div',{style:{display:'flex',flexDirection:'column',gap:'11px'}}, mk(['All vehicle transfers','All lodge & mountain-hut accommodation','All meals as indicated (B/L/D)','All park entry & car-park fees','All guide & porter fees','Catering utensils & mountain equipment','1\u00d7 4x4 game drive \u00b7 1\u00d7 boat safari','2\u00d7 sail-boat rides on Lake Malawi'],'var(--color-accent-2-700)','M20 6 9 17l-5-5'))),
+          H('div',{},
+            H('h3',{style:{fontSize:'24px',margin:'0 0 18px',display:'flex',alignItems:'center',gap:'10px'}}, H('span',{style:{color:'var(--color-accent-700)'}}, this.ic(['M12 2 2 7l10 5 10-5-10-5z','m2 17 10 5 10-5M2 12l10 5 10-5'],22)),'Optional add-ons'),
+            H('div',{style:{display:'flex',flexDirection:'column',gap:'11px'}}, mk(['Abseiling & zip-line river crossing','Kayaking, snorkelling & deep-water diving','Walking safari & night game drive','Extra nights on Lake Malawi'],'var(--color-accent-700)','M12 5v14M5 12h14')),
+            H('h3',{style:{fontSize:'24px',margin:'28px 0 18px',display:'flex',alignItems:'center',gap:'10px'}}, H('span',{style:{color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}}, this.ic(['M18 6 6 18M6 6l12 12'],22)),'Not included'),
+            H('div',{style:{display:'flex',flexDirection:'column',gap:'11px'}}, mk(['International & domestic flights','Bottled water & extra drinks','Travel insurance','Tips & personal spending'],'color-mix(in srgb, var(--color-text) 45%, transparent)','M18 6 6 18M6 6l12 12'))))));
+
+    const gimgs=['photos/summit-celebrate.jpg','photos/rock-pool.jpg','photos/hikers-valley.jpg','photos/boat-safari.jpg','photos/tea-carry.jpg','photos/lake-beach.jpg','photos/misty-summit.jpg','photos/village-group.jpg'];
+    const gallerySec=H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,80px) var(--space-4)'}},
+      H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Gallery'), H('h2',{style:{fontSize:'clamp(26px,3.2vw,36px)',margin:'10px 0 26px'}},'Moments from the trail'),
+      H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'12px'}},
+        gimgs.map((g,i)=>H('div',{key:i,className:'mo-zoom',style:{borderRadius:'var(--radius-md)',aspectRatio:i%5===0?'2/1':'1/1',gridColumn:i%5===0?'span 2':'auto',boxShadow:'var(--shadow-sm)'}}, H('img',{className:'mo-photo',src:IMG(g),style:{width:'100%',height:'100%',objectFit:'cover'}})))));
+
+    const enquireSec=H('section',{id:'enquire',style:{background:'var(--color-accent-100)',scrollMarginTop:'80px'}},
+      H('div',{style:{maxWidth:'1000px',margin:'0 auto',padding:'clamp(48px,6vw,80px) var(--space-4)'}},
+        H('div',{style:{textAlign:'center',maxWidth:'46ch',margin:'0 auto 32px'}}, H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Enquire'), H('h2',{style:{fontSize:'clamp(26px,3.2vw,40px)',margin:'10px 0 0'}},'Reserve your place on this journey'), H('p',{style:{fontSize:'16px',marginTop:'14px',color:'color-mix(in srgb, var(--color-text) 75%, transparent)'}},'Send your details and a local expert will confirm availability and tailor the trip to you - usually within a day.')),
+        H('form',{onSubmit:(e)=>{e.preventDefault();alert('Thank you! This is a mockup - your enquiry would reach Mulanje Outlook Safaris.');},style:{background:'var(--color-bg)',borderRadius:'var(--radius-lg)',padding:'clamp(24px,3vw,40px)',boxShadow:'var(--shadow-md)'}},
+          H('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px'}}, H('div',{className:'field'}, H('label',{},'Full name'), H('input',{className:'input',placeholder:'Your name'})), H('div',{className:'field'}, H('label',{},'Email'), H('input',{className:'input',type:'email',placeholder:'you@email.com'}))),
+          H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1fr 1fr',gap:'16px',marginTop:'16px'}},
+            H('div',{className:'field'}, H('label',{},'Preferred month'), H('input',{className:'input',placeholder:'e.g. July 2026'})),
+            H('div',{className:'field'}, H('label',{},'Group size'), H('input',{className:'input',placeholder:'e.g. 2 adults'})),
+            H('div',{className:'field'}, H('label',{},'Fitness level'), H('select',{className:'input',style:{appearance:'none'}}, ['Confident hiker','Moderate - some hills','New to trekking'].map((o,i)=>H('option',{key:i},o))))),
+          H('div',{className:'field',style:{marginTop:'16px'}}, H('label',{},'Anything we should know?'), H('textarea',{className:'input',placeholder:'Dietary needs, add-ons you\u2019d like, questions\u2026'})),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'16px',alignItems:'center',marginTop:'20px'}}, H('button',{type:'submit',className:'btn btn-primary',style:{padding:'14px 30px',fontSize:'15px'}},'Send enquiry'), H('span',{style:{fontSize:'13.5px',color:'color-mix(in srgb, var(--color-text) 60%, transparent)'}},'or WhatsApp us on ', H('strong',{style:{color:'var(--color-accent-700)'}},'+265 000 000 000'))))));
+
+    const ot=[['3-Day Mount Mulanje Trek','photos/summit-sign.jpg','Grade 4 \u00b7 3 days','from $390'],['Liwonde Wildlife Safari','photos/hippos.jpg','Safari \u00b7 2\u20133 days','from $310'],['Tea & Culture Experience','photos/tea-mountain.jpg','Relaxed \u00b7 2 days','from $180']];
+    const otherSec=H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,80px) var(--space-4)'}},
+      H('h2',{style:{fontSize:'clamp(24px,3vw,34px)',margin:'0 0 26px'}},'Other journeys you might like'),
+      H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'var(--space-4)'}},
+        ot.map((t,i)=>H('a',{key:i,href:'#tour',onClick:(e)=>{e.preventDefault();this.go('tour');},className:'mo-zoom',style:{textDecoration:'none',color:'inherit',display:'flex',flexDirection:'column',borderRadius:'var(--radius-lg)',overflow:'hidden',background:'var(--color-surface)',boxShadow:'var(--shadow-sm)',cursor:'pointer'}},
+          H('div',{style:{aspectRatio:'3/2',overflow:'hidden'}}, H('img',{className:'mo-photo',src:IMG(t[1]),style:{width:'100%',height:'100%',objectFit:'cover'}})),
+          H('div',{style:{padding:'20px'}}, H('span',{style:{fontSize:'11px',letterSpacing:'.06em',textTransform:'uppercase',color:'var(--color-accent-700)'}},t[2]), H('h3',{style:{fontSize:'20px',margin:'8px 0 12px'}},t[0]), H('span',{style:{fontFamily:'var(--font-heading)',fontSize:'17px',color:'var(--color-accent-700)'}},t[3]))))));
+
+    return H('div',{}, hero, intro, routeSec, itinSec, inclSec, gallerySec, enquireSec, otherSec);
+  }
+
+  pageHero(img, kicker, title, sub){
+    const H=this.h.bind(this);
+    return H('section',{style:{position:'relative',overflow:'hidden'}},
+      H('img',{src:this.img(img),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}),
+      H('div',{style:{position:'absolute',inset:0,background:'linear-gradient(to top, color-mix(in srgb,#201e1d 82%,transparent), color-mix(in srgb,#201e1d 30%,transparent) 60%, color-mix(in srgb,#201e1d 45%,transparent))'}}),
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',padding:'clamp(64px,9vw,120px) var(--space-4) clamp(44px,6vw,72px)',color:'#fff'}},
+        H('span',{className:'tag tag-accent-2',style:{marginBottom:'16px'}},kicker),
+        H('h1',{style:{fontSize:'clamp(36px,5.4vw,62px)',lineHeight:1.03,margin:'16px 0 0',maxWidth:'18ch',color:'#fff',letterSpacing:'-.02em'}},title),
+        sub && H('p',{style:{fontSize:'clamp(16px,1.5vw,19px)',lineHeight:1.6,maxWidth:'56ch',margin:'18px 0 0',color:'rgba(255,255,255,.9)'}},sub)));
+  }
+  ctaBand(title, sub, primaryLabel, primaryRoute, secLabel, secRoute){
+    const H=this.h.bind(this);
+    return H('section',{style:{background:'var(--color-accent-100)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,80px) var(--space-4)',display:'flex',flexWrap:'wrap',alignItems:'center',gap:'24px',justifyContent:'space-between'}},
+        H('div',{style:{maxWidth:'46ch'}}, H('h2',{style:{fontSize:'clamp(26px,3.2vw,38px)',margin:0}},title), H('p',{style:{fontSize:'16px',marginTop:'12px',color:'color-mix(in srgb, var(--color-text) 75%, transparent)'}},sub)),
+        H('div',{style:{display:'flex',gap:'12px',flexWrap:'wrap'}},
+          H('a',{className:'btn btn-primary',href:'#'+primaryRoute,onClick:(e)=>{e.preventDefault();this.go(primaryRoute);},style:{padding:'13px 24px',cursor:'pointer'}},primaryLabel),
+          secLabel && H('a',{className:'btn btn-secondary',href:'#'+secRoute,onClick:(e)=>{e.preventDefault();this.go(secRoute);},style:{padding:'13px 24px',cursor:'pointer'}},secLabel))));
+  }
+
+  // ---------- ABOUT ----------
+  aboutPage(){
+    const mobile=this.state.w<860; const H=this.h.bind(this), IMG=this.img.bind(this);
+    const story = H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,96px) var(--space-4)'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1.1fr',gap:'clamp(32px,5vw,72px)',alignItems:'center'}},
+        H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-md)'}}, H('img',{className:'washed mo-photo',src:IMG('photos/new-tea-mountain.jpg'),style:{width:'100%',height:'100%',objectFit:'cover',aspectRatio:'5/4'}})),
+        H('div',{},
+          H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Who we are'),
+          H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0',maxWidth:'20ch'}},'A locally owned company with Malawi in its bones'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'20px',color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},'Mulanje Outlook is a locally owned and managed company that runs mountain hiking, safaris and informative, eco-friendly sightseeing tours across Southern Malawi. Our goal is to provide efficient, reliable and professionally organised services that meet the every want and need of our valued clients.'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,color:'color-mix(in srgb, var(--color-text) 80%, transparent)'}},'We do this by ensuring our team is adequately trained and equipped, and by paying attention to detail. We incorporate our clients\u2019 specific interests into flexible itineraries that we happily adjust to suit your time, level of fitness and budget.'),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'26px',marginTop:'26px'}},
+            [['100%','Locally owned & guided'],['Years','On Mulanje\u2019s trails'],['1\u201310','Day tailored tours']].map((s,i)=>H('div',{key:i}, H('div',{style:{fontFamily:'var(--font-heading)',fontSize:'30px',color:'var(--color-accent-700)'}},s[0]), H('div',{style:{fontSize:'12.5px',color:'color-mix(in srgb, var(--color-text) 60%, transparent)'}},s[1])))))));
+    const why=[
+      ['Experienced local guides','Our guides have spent years leading treks through Mulanje\u2019s forests and peaks, visiting the parks and working with local communities.',['M6 3v18','M6 8h9l-2.5 3L15 14H6']],
+      ['Tailored itineraries','Carefully planned trips shaped around your interests, pace and budget - flexible and easily adjusted.',['M8 2v4','M16 2v4','M3 10h18','M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z']],
+      ['Safe & professional','Reliable, professional service with trained staff, trusted equipment and porters on every trip.',['M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z','m9 12 2 2 4-4']],
+      ['Responsible tourism','We support local businesses and communities and protect Malawi\u2019s natural environment.',['M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z','M2 21c0-3 1.85-5.36 5.08-6']],
+      ['Comfortable & trusted','Comfortable transport and trusted accommodation, from lakeside lodges to mountain huts.',['M5 17h14','M3 12h18l-2-6H5z','M7.5 12a1 1 0 1 0 0 .1','M16.5 12a1 1 0 1 0 0 .1']],
+      ['Exceptional value','Memorable experiences and genuine hospitality from your first enquiry until your journey ends.',['m12 2 2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6z']],
+    ];
+    const whySec=H('section',{style:{background:'var(--color-surface)'}},
+      H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,90px) var(--space-4)'}},
+        H('div',{style:{maxWidth:'60ch'}}, H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Why travel with us'), H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0'}},'The best journeys are built on local knowledge')),
+        H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(250px,1fr))',gap:'var(--space-4)',marginTop:'44px'}},
+          why.map((c,i)=>H('div',{key:i,className:'card elev-sm',style:{background:'var(--color-bg)',padding:'26px',gap:0}},
+            H('div',{style:{width:'48px',height:'48px',borderRadius:'50%',background:'var(--color-accent-100)',display:'grid',placeItems:'center',color:'var(--color-accent-700)',marginBottom:'16px'}}, this.ic(c[2],22)),
+            H('h4',{style:{fontSize:'19px',margin:'0 0 8px'}},c[0]), H('p',{style:{fontSize:'14px',lineHeight:1.55,margin:0,color:'color-mix(in srgb, var(--color-text) 72%, transparent)'}},c[1]))))));
+    const dests=['Lake Malawi National Park','Liwonde National Park','Majete Game Reserve','Mulanje Mountain','Zomba City & Plateau'];
+    const destSec=H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(56px,7vw,90px) var(--space-4)'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1fr',gap:'clamp(28px,4vw,60px)',alignItems:'center'}},
+        H('div',{},
+          H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Where we go'),
+          H('h2',{style:{fontSize:'clamp(26px,3.2vw,38px)',margin:'10px 0 18px'}},'Our key destinations'),
+          H('div',{style:{display:'flex',flexDirection:'column'}}, dests.map((d,i)=>H('div',{key:i,style:{display:'flex',alignItems:'center',gap:'14px',padding:'15px 0',borderBottom:'1px solid var(--color-divider)'}},
+            H('span',{style:{fontFamily:'var(--font-heading)',fontSize:'16px',color:'var(--color-accent-700)',width:'26px'}}, '0'+(i+1)),
+            H('span',{style:{fontSize:'17px'}},d)))),
+          H('a',{className:'btn btn-ghost',href:'#destinations',onClick:(e)=>{e.preventDefault();this.go('destinations');},style:{marginTop:'18px',cursor:'pointer'}},'Explore destinations ', this.ic(['M5 12h14','m12 5 7 7-7 7'],17))),
+        H('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'12px'}},
+          ['photos/new-rock-dome.jpg','photos/new-elephant.jpg','photos/new-lake-island.jpg','photos/new-plateau.jpg'].map((im,i)=>H('div',{key:i,className:'mo-zoom',style:{borderRadius:'var(--radius-md)',overflow:'hidden',aspectRatio:'1/1',boxShadow:'var(--shadow-sm)'}}, H('img',{className:'mo-photo',src:IMG(im),style:{width:'100%',height:'100%',objectFit:'cover'}}))))));
+    const commit=H('section',{className:'mo-zoom',style:{position:'relative',overflow:'hidden'}},
+      H('img',{className:'mo-photo',src:IMG('photos/new-tea-pickers.jpg'),style:{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover'}}),
+      H('div',{style:{position:'absolute',inset:0,background:'linear-gradient(105deg, color-mix(in srgb,#201e1d 82%,transparent) 0%, color-mix(in srgb,#201e1d 55%,transparent) 55%, transparent 100%)'}}),
+      H('div',{style:{position:'relative',maxWidth:'1200px',margin:'0 auto',padding:'clamp(64px,8vw,120px) var(--space-4)'}},
+        H('div',{style:{maxWidth:'52ch',color:'#fff'}},
+          H('span',{className:'card-kicker',style:{fontSize:'11px',color:'var(--color-accent-300)'}},'Our commitment'),
+          H('h2',{style:{fontSize:'clamp(28px,3.6vw,44px)',margin:'12px 0 0',color:'#fff'}},'Tourism that creates positive experiences for everyone'),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'18px',color:'rgba(255,255,255,.9)'}},'We believe tourism should benefit both visitors and local people. By travelling with us you help create sustainable opportunities for local families while preserving the landscapes and traditions that make Malawi unique.'),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'10px',marginTop:'26px'}}, ['Professional guiding','Responsible tourism','Supporting communities','Protecting the environment'].map((t,i)=>H('span',{key:i,className:'tag',style:{background:'rgba(255,255,255,.15)',color:'#fff',padding:'6px 14px'}},t))))));
+    return H('div',{}, this.pageHero('photos/new-summit-figure.jpg','About us','About Mulanje Outlook Safaris','A locally owned tour operator dedicated to authentic, safe and unforgettable travel across Southern Malawi.'), story, whySec, destSec, commit, this.ctaBand('Ready to plan your Malawi adventure?','Tell us your dates and interests and a local expert will shape a trip around you.','Start planning','contact','Browse tours','tours'));
+  }
+
+  // ---------- TOURS LISTING ----------
+  toursPage(){
+    const mobile=this.state.w<860; const H=this.h.bind(this), IMG=this.img.bind(this);
+    const tours=[
+      {t:'3-Day Mount Mulanje Trek',img:'photos/summit-sign.jpg',grade:'Grade 4 \u00b7 3 days',price:'from $390',feat:true,desc:'A rewarding adventure to Sapitwa Peak, including mountain-hut accommodation, experienced guides, porters, meals and breathtaking views.',route:'tour'},
+      {t:'5-Day Grand Mulanje Traverse',img:'photos/new-misty-summit.jpg',grade:'Grade 3 \u00b7 5 days',price:'from $690',desc:'A traverse across the entire massif - diverse vegetation, panoramic landscapes, optional peaks above 2,500m and numerous rock pools.',route:'tour'},
+      {t:'6-Day Southern Malawi Tour',img:'photos/mulanje-view.jpg',grade:'Signature \u00b7 6 days',price:'from $1,140',feat:true,desc:'Mount Mulanje, Zomba, a Liwonde safari and Lake Malawi combined into one unforgettable journey - our most complete trip.',route:'tour'},
+      {t:'Liwonde Wildlife Safari',img:'photos/new-elephant.jpg',grade:'Safari \u00b7 2\u20133 days',price:'from $310',desc:'Exciting game drives and peaceful boat safaris along the Shire River, discovering Malawi\u2019s remarkable wildlife.',route:'tour'},
+      {t:'Tea & Culture Experience',img:'photos/new-tea-landscape.jpg',grade:'Relaxed \u00b7 2 days',price:'from $180',desc:'Explore historic tea estates before visiting nearby villages to experience the traditions and hospitality of local communities.',route:'tour'},
+      {t:'Southern Malawi Explorer',img:'photos/new-lake-island.jpg',grade:'Tailored \u00b7 7\u201310 days',price:'from $1,350',desc:'Combine Mount Mulanje, tea estates, cultural experiences and a wildlife safari into one flexible, tailor-made journey.',route:'tour'},
+    ];
+    const grid=H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,84px) var(--space-4)'}},
+      H('div',{style:{maxWidth:'56ch',marginBottom:'40px'}}, H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Popular tours'), H('h2',{style:{fontSize:'clamp(28px,3.4vw,40px)',margin:'10px 0 0'}},'Journeys across Southern Malawi'), H('p',{style:{fontSize:'16px',marginTop:'14px',color:'color-mix(in srgb, var(--color-text) 75%, transparent)'}},'Every itinerary is a starting point. Tell us your dates, interests and budget and we\u2019ll shape it around you.')),
+      H('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:'var(--space-4)'}},
+        tours.map((t,i)=>H('a',{key:i,href:'#'+t.route,onClick:(e)=>{e.preventDefault();this.go(t.route);},className:'mo-xcard mo-zoom',style:{textDecoration:'none',color:'inherit',display:'flex',flexDirection:'column',borderRadius:'var(--radius-lg)',overflow:'hidden',background:'var(--color-surface)',boxShadow:'var(--shadow-sm)',cursor:'pointer'}},
+          H('div',{style:{aspectRatio:'3/2',overflow:'hidden',position:'relative'}}, H('img',{className:'mo-photo',src:IMG(t.img),style:{width:'100%',height:'100%',objectFit:'cover'}}),
+            t.feat && H('span',{style:{position:'absolute',top:'14px',left:'14px',background:'var(--color-accent)',color:'#fff',fontSize:'11px',letterSpacing:'.05em',textTransform:'uppercase',padding:'5px 11px',borderRadius:'999px'}},'Most popular'),
+            H('span',{style:{position:'absolute',top:'14px',right:'14px',background:'var(--color-bg)',color:'var(--color-accent-700)',fontFamily:'var(--font-heading)',fontSize:'13px',padding:'6px 13px',borderRadius:'999px',boxShadow:'var(--shadow-sm)'}},t.price)),
+          H('div',{style:{padding:'22px',display:'flex',flexDirection:'column',flex:1}},
+            H('span',{style:{fontSize:'11px',letterSpacing:'.06em',textTransform:'uppercase',color:'var(--color-accent-700)'}},t.grade),
+            H('h3',{style:{fontSize:'21px',margin:'8px 0 8px'}},t.t),
+            H('p',{style:{fontSize:'14px',lineHeight:1.55,margin:'0 0 16px',color:'color-mix(in srgb, var(--color-text) 72%, transparent)',flex:1}},t.desc),
+            H('span',{className:'btn btn-ghost',style:{alignSelf:'flex-start',padding:0}},'View details \u2192'))))));
+    return H('div',{}, this.pageHero('photos/new-rock-dome.jpg','Popular tours','Find your Malawi adventure','From a sunrise summit of Sapitwa to boat safaris on the Shire and lazy days on Lake Malawi - pick a journey or let us build one for you.'), grid, this.ctaBand('Don\u2019t see quite the right trip?','We tailor every itinerary. Share what you\u2019re after and we\u2019ll design it around your time, fitness and budget.','Enquire now','contact','See activities','activities'));
+  }
+
+  // ---------- ACTIVITIES ----------
+  activitiesPage(){
+    const mobile=this.state.w<900; const H=this.h.bind(this), IMG=this.img.bind(this);
+    const acts=[
+      {name:'Climbing, Abseiling & Zip-Line',img:['photos/abseil-river.jpg','photos/waterfall-tall.jpg'],tag:'Adrenaline',lead:'Adrenaline-inducing, achievement-oriented adventure activities in the Likhubula and Muloza River Valleys of Mulanje.',body:'The sites are easily accessible and perfect for group outings, spiced with an informative guided tour to the legendary Dziwe la Nkhalamba falls and rock pools. Suitable for all ages above 10 - no previous experience required.',chips:['Top-rope climbing','Abseiling','Zip-line river crossing','Dziwe Falls & rock pools']},
+      {name:'Lake Malawi Water Sports',img:['photos/new-lake-island.jpg','photos/lake-boat.jpg'],tag:'Water',lead:'Lake Malawi is the largest freshwater lake in Africa - open sandy beaches, crystal-clear waters and countless colourful Mbuna fish.',body:'The destination offers a wide range of activities to choose from. Whether it is diving, snorkelling, kayaking, or simply sailing to nearby Thumbi or Mumbo Island, your guide will take you there.',chips:['Diving','Snorkelling','Kayaking','Sailing to the islands']},
+      {name:'Village Visits',img:['photos/village-group.jpg','photos/new-tea-pickers.jpg'],tag:'Culture',lead:'Meet the people behind the Warm Heart of Africa through respectful, guided community visits.',body:'Experience everyday village life through traditional music and dance, local cuisine, storytelling and craft markets - authentic connections that directly support local communities.',chips:['Community visits','Music & dance','Local cuisine','Craft markets']},
+      {name:'Festivals',img:['photos/village-dance.jpg','photos/new-plateau.jpg'],tag:'Seasonal',lead:'The best way to taste traditionally made cuisine and mingle with the locals is to attend one of the national festivals.',body:'We can time your visit around Malawi\u2019s vibrant calendar of music and cultural festivals, weaving a celebration into your wider itinerary.',chips:['Live music','Traditional food','Local crafts','Community spirit']},
+    ];
+    const rows=H('div',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(40px,6vw,72px) var(--space-4)'}},
+      acts.map((a,i)=>{
+        const rev=i%2===1&&!mobile;
+        const media=H('div',{style:{display:'grid',gridTemplateColumns:'1.6fr 1fr',gap:'10px',height:mobile?'auto':'380px'}},
+          H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-lg)',overflow:'hidden',boxShadow:'var(--shadow-md)',minHeight:mobile?'220px':'auto'}}, H('img',{className:'mo-photo',src:IMG(a.img[0]),style:{width:'100%',height:'100%',objectFit:'cover'}})),
+          H('div',{className:'mo-zoom',style:{borderRadius:'var(--radius-md)',overflow:'hidden',minHeight:mobile?'140px':'auto'}}, H('img',{className:'mo-photo',src:IMG(a.img[1]),style:{width:'100%',height:'100%',objectFit:'cover'}})));
+        const text=H('div',{},
+          H('span',{className:'tag tag-accent-2',style:{marginBottom:'14px'}},a.tag),
+          H('h2',{style:{fontSize:'clamp(26px,3.2vw,38px)',margin:'12px 0 0'}},a.name),
+          H('p',{style:{fontSize:'16.5px',lineHeight:1.62,marginTop:'16px',color:'color-mix(in srgb, var(--color-text) 82%, transparent)'}},a.lead),
+          H('p',{style:{fontSize:'15px',lineHeight:1.62,color:'color-mix(in srgb, var(--color-text) 72%, transparent)'}},a.body),
+          H('div',{style:{display:'flex',flexWrap:'wrap',gap:'8px',marginTop:'20px'}}, a.chips.map((c,j)=>H('span',{key:j,className:'tag tag-accent',style:{padding:'6px 13px',fontSize:'12px'}},c))));
+        return H('section',{key:i,style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1fr',gap:'clamp(28px,4vw,60px)',alignItems:'center',padding:'clamp(36px,5vw,64px) 0',borderTop:i===0?'none':'1px solid var(--color-divider)'}}, rev?text:media, rev?media:text);
+      }));
+    return H('div',{}, this.pageHero('photos/abseil-river.jpg','Adventure activities','Add a thrill to your journey','Climb, abseil and zip-line across Mulanje\u2019s river valleys, dive the clear waters of Lake Malawi, or share in village life and festivals.'), rows, this.ctaBand('Bundle activities into your tour','Most activities slot straight into a wider itinerary. Tell us what excites you and we\u2019ll build it in.','Enquire now','contact','Browse tours','tours'));
+  }
+
+  // ---------- GALLERY ----------
+  galleryPage(){
+    const H=this.h.bind(this), IMG=this.img.bind(this);
+    const imgs=['photos/new-misty-summit.jpg','photos/new-lion.jpg','photos/summit-celebrate.jpg','photos/new-tea-pickers.jpg','photos/new-lake-island.jpg','photos/new-serval.jpg','photos/hikers-valley.jpg','photos/new-elephant.jpg','photos/rock-pool.jpg','photos/new-trogon.jpg','photos/new-rock-dome.jpg','photos/boat-safari.jpg','photos/new-gazelle.jpg','photos/new-tea-landscape.jpg','photos/sapitwa.jpg','photos/new-lake-village.jpg','photos/new-elephant-herd.jpg','photos/village-dance.jpg','photos/new-plateau.jpg','photos/misty-summit.jpg','photos/lake-sunset.jpg','photos/new-zomba-slope.jpg','photos/tea-carry.jpg','photos/hippos.jpg'];
+    const grid=H('section',{style:{maxWidth:'1240px',margin:'0 auto',padding:'clamp(44px,5vw,72px) var(--space-4)'}},
+      H('div',{style:{columnCount:this.state.w<600?1:this.state.w<960?2:3,columnGap:'14px'}},
+        imgs.map((im,i)=>H('div',{key:i,className:'mo-zoom',style:{breakInside:'avoid',marginBottom:'14px',borderRadius:'var(--radius-md)',overflow:'hidden',boxShadow:'var(--shadow-sm)'}}, H('img',{className:'mo-photo',src:IMG(im),loading:'lazy',style:{width:'100%',display:'block'}})))));
+    return H('div',{}, this.pageHero('photos/new-misty-summit.jpg','Gallery','Moments from Southern Malawi','Peaks above the clouds, big game on the Shire, tea fields and golden lake sunsets - a glimpse of what awaits.'), grid, this.ctaBand('Like what you see?','These are the places we\u2019ll take you. Start planning your own set of memories.','Plan your trip','contact','Browse tours','tours'));
+  }
+
+  // ---------- CONTACT ----------
+  contactPage(){
+    const mobile=this.state.w<860; const H=this.h.bind(this);
+    const info=H('div',{},
+      H('span',{className:'card-kicker',style:{fontSize:'11px'}},'Get in touch'),
+      H('h2',{style:{fontSize:'clamp(28px,3.4vw,42px)',margin:'10px 0 0',maxWidth:'16ch'}},'Let\u2019s plan your Malawi adventure'),
+      H('p',{style:{fontSize:'16.5px',lineHeight:1.65,marginTop:'18px',color:'color-mix(in srgb, var(--color-text) 78%, transparent)',maxWidth:'44ch'}},'From your first enquiry until your journey ends, our goal is to make your visit enjoyable, seamless and inspiring. Send a message and a local expert will reply personally within 24 hours.'),
+      H('div',{style:{display:'flex',flexDirection:'column',gap:'14px',marginTop:'28px'}},
+        [[['M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z'],'Call or WhatsApp','+265 000 000 000'],[['M2 4h20v16H2z','m22 7-10 5L2 7'],'Email','info@mulanjeoutlook.com'],[['M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z','M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'],'Based in','Likhubula, Mulanje, Malawi'],[['M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z','M12 6v6l4 2'],'Office hours','Mon\u2013Sat, 7:00\u201318:00 CAT']].map((c,i)=>
+          H('div',{key:i,style:{display:'flex',alignItems:'center',gap:'13px'}},
+            H('span',{style:{width:'46px',height:'46px',borderRadius:'50%',background:'var(--color-accent-100)',display:'grid',placeItems:'center',color:'var(--color-accent-700)',flex:'none'}}, this.ic(c[0],19)),
+            H('span',{}, H('span',{style:{display:'block',fontSize:'12px',color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},c[1]), H('span',{style:{fontSize:'16px',fontFamily:'var(--font-heading)'}},c[2]))))));
+    const form=H('form',{onSubmit:(e)=>{e.preventDefault();alert('Thank you! This is a mockup - your enquiry would reach Mulanje Outlook Safaris.');},style:{background:'var(--color-surface)',borderRadius:'var(--radius-lg)',padding:'clamp(24px,3vw,36px)',boxShadow:'var(--shadow-md)'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px'}}, H('div',{className:'field'}, H('label',{},'Full name'), H('input',{className:'input',placeholder:'Your name'})), H('div',{className:'field'}, H('label',{},'Email'), H('input',{className:'input',type:'email',placeholder:'you@email.com'}))),
+      H('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'16px',marginTop:'16px'}},
+        H('div',{className:'field'}, H('label',{},'Interested in'), H('select',{className:'input',style:{appearance:'none'}}, ['Mount Mulanje trek','Wildlife safari','Southern Malawi tour','Adventure activities','Tea & culture','Lake Malawi','Not sure yet'].map((o,i)=>H('option',{key:i},o)))),
+        H('div',{className:'field'}, H('label',{},'Approx. dates'), H('input',{className:'input',placeholder:'e.g. June 2026'}))),
+      H('div',{className:'field',style:{marginTop:'16px'}}, H('label',{},'Tell us more'), H('textarea',{className:'input',placeholder:'Group size, interests, how long you have\u2026'})),
+      H('button',{type:'submit',className:'btn btn-primary btn-block',style:{padding:'13px',fontSize:'15px',marginTop:'20px'}},'Send enquiry'),
+      H('p',{style:{fontSize:'12px',textAlign:'center',margin:'12px 0 0',color:'color-mix(in srgb, var(--color-text) 55%, transparent)'}},'We reply personally within 24 hours.'));
+    const body=H('section',{style:{maxWidth:'1200px',margin:'0 auto',padding:'clamp(48px,6vw,84px) var(--space-4)'}},
+      H('div',{style:{display:'grid',gridTemplateColumns:mobile?'1fr':'1fr 1.15fr',gap:'clamp(32px,5vw,64px)',alignItems:'start'}}, info, form));
+    return H('div',{}, this.pageHero('photos/lake-sunset.jpg','Contact & booking','Begin your journey','Your adventure begins here - reach out and let\u2019s craft something unforgettable.'), body);
+  }
+
+  renderVals(){
+    const r=this.state.route;
+    const page = r==='about'?this.aboutPage() : r==='destinations'?this.destPage() : r==='tours'?this.toursPage() : r==='tour'?this.tourPage() : r==='activities'?this.activitiesPage() : r==='gallery'?this.galleryPage() : r==='contact'?this.contactPage() : this.homePage();
+    return { app: React.createElement('div',{style:this.feelVars()}, this.switcher(), this.nav(), page, this.footer()) };
+  }
+}
+</script>
+</body>
+</html>

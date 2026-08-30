@@ -1,10 +1,11 @@
-name: Deploy demo1 to GitHub Pages
+name: Deploy demos to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
       - 'demo1/**'
+      - 'demo2/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -25,9 +26,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp -r demo1/. _site/
+          mkdir -p _site/demo2
+          cp -r demo2/. _site/demo2/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./demo1
+          path: ./_site
       - id: deployment
         uses: actions/deploy-pages@v4
