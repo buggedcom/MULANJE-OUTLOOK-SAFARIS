@@ -6,6 +6,7 @@ on:
     paths:
       - 'demo1/**'
       - 'demo2/**'
+      - 'demo3/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -32,6 +33,8 @@ jobs:
           cp -r demo1/. _site/
           mkdir -p _site/demo2
           cp -r demo2/. _site/demo2/
+          mkdir -p _site/demo3
+          cp -r demo3/. _site/demo3/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
