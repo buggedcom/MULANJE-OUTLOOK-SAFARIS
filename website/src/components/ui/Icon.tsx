@@ -4,7 +4,7 @@
 
 export interface IconProps {
   /** One path `d` string, or several (multi-path glyphs). */
-  d: string | string[];
+  d: string | readonly string[];
   size?: number;
   color?: string;
   strokeWidth?: number;

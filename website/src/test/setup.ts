@@ -7,6 +7,13 @@ import { cleanup } from '@testing-library/react';
 // so no matchMedia polyfill is needed here. Tests that exercise mobile
 // layout set window.innerWidth and dispatch a 'resize' event.
 
+// jsdom implements neither of these; stub as no-ops so the scroll manager
+// and any scrollIntoView calls don't emit "Not implemented" noise.
+window.scrollTo = (() => {}) as typeof window.scrollTo;
+if (!Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = () => {};
+}
+
 afterEach(() => {
   cleanup();
 });
