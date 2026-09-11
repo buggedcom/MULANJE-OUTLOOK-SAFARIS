@@ -12,48 +12,65 @@ const EXPECTED_SLUGS = [
   'southern-explorer',
 ] as const;
 
-describe('tours data integrity', () => {
-  it('contains exactly the six expected slugs', () => {
-    expect(tourSlugs).toHaveLength(6);
-    expect(new Set(tourSlugs)).toEqual(new Set(EXPECTED_SLUGS));
+describe('GIVEN the tours dataset', () => {
+  describe('WHEN the slugs are inspected', () => {
+    it('THEN there are exactly the six expected slugs', () => {
+      expect(tourSlugs).toHaveLength(6);
+      expect(new Set(tourSlugs)).toEqual(new Set(EXPECTED_SLUGS));
+    });
   });
 
-  it.each(Object.entries(tours))('tour "%s" is well-formed', (_slug, tour: Tour) => {
-    expect(tour.title.length).toBeGreaterThan(0);
-    expect(tour.subtitle.length).toBeGreaterThan(0);
-    expect(tour.heroImg.length).toBeGreaterThan(0);
-    expect(tour.overviewP.length).toBeGreaterThanOrEqual(1);
-    expect(tour.days.length).toBeGreaterThanOrEqual(1);
-    expect(tour.stops.length).toBeGreaterThanOrEqual(1);
-    expect(tour.highlights.length).toBeGreaterThanOrEqual(1);
-    expect(tour.included.length).toBeGreaterThanOrEqual(1);
-
-    for (const stop of tour.stops) {
-      expect(stop.label.length).toBeGreaterThan(0);
-      expect(stop.sub.length).toBeGreaterThan(0);
-    }
-    for (const day of tour.days) {
-      expect(typeof day.d).toBe('number');
-      expect(day.t.length).toBeGreaterThan(0);
-      expect(day.body.length).toBeGreaterThan(0);
-      expect(day.meta.length).toBeGreaterThanOrEqual(1);
-      for (const [key, label] of day.meta) {
-        expect(typeof key).toBe('string');
-        expect(label.length).toBeGreaterThan(0);
+  describe('WHEN each related reference is checked', () => {
+    it('THEN every related entry is a real slug', () => {
+      for (const tour of Object.values(tours)) {
+        for (const rel of tour.related) {
+          expect(isTourSlug(rel)).toBe(true);
+        }
       }
-    }
-  });
-
-  it('every related entry is a real slug', () => {
-    for (const tour of Object.values(tours)) {
-      for (const rel of tour.related) {
-        expect(isTourSlug(rel)).toBe(true);
-      }
-    }
+    });
   });
 });
 
-// Collect every image path referenced by the tours + site data modules.
+describe.each(Object.entries(tours))('GIVEN tour "%s"', (_slug, tour: Tour) => {
+  describe('WHEN its shape is validated', () => {
+    it('THEN has non-empty title, subtitle and hero image', () => {
+      expect(tour.title.length).toBeGreaterThan(0);
+      expect(tour.subtitle.length).toBeGreaterThan(0);
+      expect(tour.heroImg.length).toBeGreaterThan(0);
+    });
+
+    it('THEN has at least one overview paragraph, stop, highlight and inclusion', () => {
+      expect(tour.overviewP.length).toBeGreaterThanOrEqual(1);
+      expect(tour.stops.length).toBeGreaterThanOrEqual(1);
+      expect(tour.highlights.length).toBeGreaterThanOrEqual(1);
+      expect(tour.included.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it('THEN every stop has a label and sub', () => {
+      for (const stop of tour.stops) {
+        expect(stop.label.length).toBeGreaterThan(0);
+        expect(stop.sub.length).toBeGreaterThan(0);
+      }
+    });
+
+    it('THEN has at least one day, each with a title, body and meta rows', () => {
+      expect(tour.days.length).toBeGreaterThanOrEqual(1);
+      for (const day of tour.days) {
+        expect(typeof day.d).toBe('number');
+        expect(day.t.length).toBeGreaterThan(0);
+        expect(day.body.length).toBeGreaterThan(0);
+        expect(day.meta.length).toBeGreaterThanOrEqual(1);
+        for (const [key, label] of day.meta) {
+          expect(typeof key).toBe('string');
+          expect(label.length).toBeGreaterThan(0);
+        }
+      }
+    });
+  });
+});
+
+// Cross-data integrity guard: intentionally spans tours AND site data, so no
+// separate site image test exists. See the plan's Phase 1 note.
 function collectImagePaths(): string[] {
   const paths: string[] = [];
   for (const tour of Object.values(tours)) {
@@ -71,18 +88,21 @@ function collectImagePaths(): string[] {
   return paths;
 }
 
-describe('image paths resolve', () => {
+describe('GIVEN every image path referenced by the tours and site data', () => {
   const paths = [...new Set(collectImagePaths())];
 
-  it('references at least a few dozen images', () => {
-    expect(paths.length).toBeGreaterThan(30);
+  describe('WHEN the set is counted', () => {
+    it('THEN references at least a few dozen images', () => {
+      expect(paths.length).toBeGreaterThan(30);
+    });
   });
 
-  it.each(paths)('resolves "%s" to a bundled URL string ending in .jpg', (path) => {
-    const url = img(path);
-    expect(typeof url).toBe('string');
-    expect(url.endsWith('.jpg')).toBe(true);
-    // Must have resolved through the asset map, not fallen back to the input.
-    expect(url).not.toBe(path);
+  describe('WHEN each path is resolved through img()', () => {
+    it.each(paths)('THEN "%s" resolves to a bundled .jpg URL string', (path) => {
+      const url = img(path);
+      expect(typeof url).toBe('string');
+      expect(url.endsWith('.jpg')).toBe(true);
+      expect(url).not.toBe(path);
+    });
   });
 });
