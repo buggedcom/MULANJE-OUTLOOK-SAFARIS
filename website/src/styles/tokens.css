@@ -1,6 +1,6 @@
 /* Organic design-system tokens — ported verbatim from the demo4 canvas
-   export (_ds/organic-*/styles.css :root). Fonts are loaded via a <link>
-   in index.html, so the original CSS @import is intentionally dropped. */
+   export (the _ds organic stylesheet :root block). Fonts are loaded via a
+   <link> in index.html, so the original CSS @import is intentionally dropped. */
 
 :root {
   --color-bg: #f5ead8;

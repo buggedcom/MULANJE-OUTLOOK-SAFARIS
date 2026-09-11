@@ -1,5 +1,5 @@
 /* Organic design-system component classes + base element styles, ported
-   from _ds/organic-*/styles.css, plus the runtime-injected .mo-* helpers
+   from the _ds organic stylesheet, plus the runtime-injected .mo helpers
    and keyframes from demo4/Home.dc.html (L77-86). */
 
 *, *::before, *::after { box-sizing: border-box; }
