@@ -72,6 +72,8 @@ figcaption {
 .btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
 .btn-icon { width: 36px; height: 36px; padding: 0; }
 .btn-block { width: 100%; margin-top: var(--space-2); }
+/* Labelled icon buttons/links (social, hero CTA): wider icon-text gap. */
+.btn-inline { gap: 9px; }
 
 /* — forms — */
 .field > label {
