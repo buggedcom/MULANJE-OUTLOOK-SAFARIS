@@ -1,4 +1,5 @@
 import type { TourStop } from '../data/tours';
+import s from './RouteMap.module.css';
 
 /** SVG arc route map with numbered stops, ported from tourPage() (L450-457). */
 export function RouteMap({ stops }: { stops: TourStop[] }) {
@@ -15,7 +16,7 @@ export function RouteMap({ stops }: { stops: TourStop[] }) {
   const pathD = 'M ' + points.map((p) => `${p.x} ${p.y}`).join(' L ');
 
   return (
-    <svg viewBox="0 0 830 210" style={{ width: '100%', minWidth: '720px', height: 'auto', display: 'block' }} role="img" aria-label="Route map">
+    <svg viewBox="0 0 830 210" className={s.svg} role="img" aria-label="Route map">
       <path d={pathD} fill="none" stroke="var(--color-accent-300)" strokeWidth={3} strokeDasharray="2 9" strokeLinecap="round" />
       {points.map((s) => (
         <g key={s.n}>

@@ -1,0 +1,8 @@
+.badge {
+  border-radius: 50%;
+  background: var(--color-accent-100);
+  display: grid;
+  place-items: center;
+  color: var(--color-accent-700);
+  flex: none;
+}
