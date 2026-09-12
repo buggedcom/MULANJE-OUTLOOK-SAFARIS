@@ -1,0 +1,50 @@
+.card {
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 36px);
+  box-shadow: var(--shadow-md);
+}
+
+.successTitle {
+  font-size: 22px;
+  margin: 0;
+}
+.successText {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 12px;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.select {
+  appearance: none;
+}
+
+.error {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--color-accent-700);
+}
+
+.messageField {
+  margin-top: 16px;
+}
+
+.submit {
+  padding: 13px;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.note {
+  font-size: 12px;
+  text-align: center;
+  margin: 12px 0 0;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
