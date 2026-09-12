@@ -1,0 +1,24 @@
+.root {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(64px, 10vw, 140px) var(--space-4);
+  text-align: center;
+}
+
+.kicker {
+  font-size: 11px;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.text {
+  margin-top: 14px;
+  color: color-mix(in srgb, var(--color-text) 72%, transparent);
+}
+
+.btn {
+  padding: 13px 26px;
+  margin-top: 8px;
+}
