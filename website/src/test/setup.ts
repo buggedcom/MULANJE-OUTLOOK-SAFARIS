@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/vitest';
-import { afterEach } from 'vitest';
+import { afterEach, beforeEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 
 // The responsive hook (useBreakpoint) is width-based: it reads
@@ -14,6 +14,14 @@ if (!Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = () => {};
 }
 
+// Default network stub: requests never settle, so components that fetch on
+// mount (EnquiryForm's token) cause no state updates outside act(). Tests that
+// exercise the contact API stub fetch themselves.
+beforeEach(() => {
+  vi.stubGlobal('fetch', vi.fn(() => new Promise(() => {})));
+});
+
 afterEach(() => {
   cleanup();
+  vi.unstubAllGlobals();
 });

@@ -48,3 +48,12 @@
   margin: 12px 0 0;
   color: color-mix(in srgb, var(--color-text) 55%, transparent);
 }
+
+/* Honeypot: off-screen rather than display:none so naive bots still fill it. */
+.trap {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
