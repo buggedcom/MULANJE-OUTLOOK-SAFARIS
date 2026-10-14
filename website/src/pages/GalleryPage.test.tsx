@@ -12,7 +12,7 @@ describe('GIVEN the Gallery route', () => {
       const thumbs = container.querySelectorAll('button[aria-label^="Open image"]');
       expect(thumbs).toHaveLength(galleryImages.length);
       for (const im of container.querySelectorAll('img')) {
-        expect(im.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+        expect(im.getAttribute('src')).toMatch(/@imagetools|\.webp/);
       }
     });
 

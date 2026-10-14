@@ -14,10 +14,10 @@ describe('GIVEN a PageHero with image, kicker and title', () => {
       expect(screen.getByRole('heading', { level: 1, name: 'Our story' })).toBeInTheDocument();
     });
 
-    it('THEN resolves the background image to a .jpg URL', () => {
+    it('THEN resolves the background image to an imagetools-processed URL', () => {
       const { container } = render(<PageHero image="photos/lake-sunset.jpg" kicker="About us" title="Our story" />);
       const im = container.querySelector('img')!;
-      expect(im.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+      expect(im.getAttribute('src')).toMatch(/@imagetools|\.webp/);
     });
   });
 

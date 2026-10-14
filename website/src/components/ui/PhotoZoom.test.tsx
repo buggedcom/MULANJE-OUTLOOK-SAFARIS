@@ -10,7 +10,7 @@ describe('GIVEN a PhotoZoom with a resolvable source', () => {
       expect(container.querySelector('.mo-zoom')).toBeInTheDocument();
       const im = screen.getByAltText('Sapitwa');
       expect(im).toHaveClass('mo-photo');
-      expect(im.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+      expect(im.getAttribute('src')).toMatch(/@imagetools|\.webp/);
     });
   });
 
