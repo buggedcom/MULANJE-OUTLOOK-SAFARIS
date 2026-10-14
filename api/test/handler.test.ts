@@ -82,6 +82,29 @@ describe('GIVEN a request from a disallowed origin', () => {
   });
 });
 
+describe('GIVEN a CORS preflight', () => {
+  const preflight = (origin: string) =>
+    handle(
+      new Request('https://api.test/api/contact', {
+        method: 'OPTIONS',
+        headers: { Origin: origin, 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type' },
+      }),
+      env,
+      deps,
+    );
+  it('WHEN the origin is allowed THEN returns 204 with CORS headers', async () => {
+    const res = await preflight(ORIGIN);
+    expect(res.status).toBe(204);
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBe(ORIGIN);
+    expect(res.headers.get('Access-Control-Allow-Headers')).toContain('Content-Type');
+  });
+  it('WHEN the origin is not allowed THEN returns 403 with no CORS headers', async () => {
+    const res = await preflight('https://evil.example');
+    expect(res.status).toBe(403);
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull();
+  });
+});
+
 describe('GIVEN a valid token and enquiry', () => {
   it('WHEN posted THEN the enquiry is emailed with reply_to set and CORS echoed', async () => {
     const res = await post(await valid());

@@ -26,7 +26,7 @@ export const LIMITS = {
 };
 const MAX_BODY_BYTES = 16 * 1024;
 
-function json(body: unknown, status: number, origin: string | null, extra: HeadersInit = {}): Response {
+function baseHeaders(origin: string | null, extra: HeadersInit = {}): Headers {
   const headers = new Headers(extra);
   headers.set('Cache-Control', 'no-store');
   headers.set('X-Content-Type-Options', 'nosniff');
@@ -37,7 +37,11 @@ function json(body: unknown, status: number, origin: string | null, extra: Heade
     headers.set('Access-Control-Allow-Headers', 'Content-Type');
     headers.set('Access-Control-Max-Age', '600');
   }
-  return Response.json(body, { status, headers });
+  return headers;
+}
+
+function json(body: unknown, status: number, origin: string | null, extra: HeadersInit = {}): Response {
+  return Response.json(body, { status, headers: baseHeaders(origin, extra) });
 }
 
 export async function handle(request: Request, env: Env, deps: Deps): Promise<Response> {
@@ -48,7 +52,8 @@ export async function handle(request: Request, env: Env, deps: Deps): Promise<Re
   const origin = requestOrigin && allowed.includes(requestOrigin) ? requestOrigin : null;
 
   if (request.method === 'OPTIONS') {
-    return origin ? new Response(null, { status: 204, headers: json(null, 204, origin).headers }) : new Response(null, { status: 403 });
+    // A 204 must have no body, so it can't go through json().
+    return new Response(null, { status: origin ? 204 : 403, headers: baseHeaders(origin) });
   }
   if (!origin) return json({ error: 'forbidden' }, 403, null);
 
