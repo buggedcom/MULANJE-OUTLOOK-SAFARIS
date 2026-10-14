@@ -1,5 +1,6 @@
-import { useId, useState, type ReactNode } from 'react';
+import { useEffect, useId, useState, type ReactNode } from 'react';
 import { Field } from './ui/Field';
+import { fetchToken, submitEnquiry } from '../lib/enquiryApi';
 import s from './EnquiryForm.module.css';
 
 export interface FieldDef {
@@ -31,9 +32,16 @@ const baseFields: FieldDef[] = [
   { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@email.com' },
 ];
 
+const ERROR_COPY = {
+  rate_limited: 'Too many enquiries from your connection. Please try again later or message us on WhatsApp.',
+  token: 'Your session expired. Please press send again.',
+  network: 'We could not reach the server. Please check your connection and try again.',
+  server: 'Something went wrong sending your enquiry. Please try again or message us on WhatsApp.',
+} as const;
+
 /**
- * Client-side enquiry form. Validates required fields and email format,
- * then shows a success state. Nothing is sent to a backend.
+ * Enquiry form. Validates client-side, then posts to the contact API with a
+ * single-use token (fetched on mount, re-fetched after every attempt).
  */
 export function EnquiryForm({
   fields = [],
@@ -55,6 +63,19 @@ export function EnquiryForm({
   const [values, setValues] = useState<Record<string, string>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [formError, setFormError] = useState('');
+  const [token, setToken] = useState<string | null>(null);
+  // Honeypot: hidden from people, tempting to bots.
+  const [trap, setTrap] = useState('');
+
+  useEffect(() => {
+    let live = true;
+    void fetchToken().then((t) => live && setToken(t));
+    return () => {
+      live = false;
+    };
+  }, []);
 
   const set = (name: string, value: string) => {
     setValues((v) => ({ ...v, [name]: value }));
@@ -72,11 +93,35 @@ export function EnquiryForm({
     return next;
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (sending) return;
     const next = validate();
     setErrors(next);
-    if (Object.keys(next).length === 0) setSubmitted(true);
+    if (Object.keys(next).length > 0) return;
+
+    setFormError('');
+    setSending(true);
+    // Tokens are single use, so a missing one (failed mount fetch) is retried here.
+    const t = token ?? (await fetchToken());
+    setToken(null);
+    if (!t) {
+      setSending(false);
+      setFormError(ERROR_COPY.network);
+      void fetchToken().then(setToken);
+      return;
+    }
+    const payload: Record<string, string> = { token: t, website: trap };
+    for (const f of allFields) payload[f.name] = (values[f.name] ?? '').trim();
+    const result = await submitEnquiry(payload);
+    setSending(false);
+    if (result.ok) {
+      setSubmitted(true);
+      return;
+    }
+    if (result.kind === 'validation') setErrors(result.fields);
+    else setFormError(ERROR_COPY[result.kind]);
+    void fetchToken().then(setToken);
   };
 
   // Background is a caller-provided token, so it stays inline.
@@ -150,8 +195,21 @@ export function EnquiryForm({
         </Field>
       </div>
 
-      <button type="submit" className={`btn btn-primary btn-block ${s.submit}`}>
-        {submitLabel}
+      <div className={s.trap} aria-hidden="true">
+        <label>
+          Leave this field empty
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" value={trap} onChange={(e) => setTrap(e.target.value)} />
+        </label>
+      </div>
+
+      {formError && (
+        <p role="alert" className={s.error}>
+          {formError}
+        </p>
+      )}
+
+      <button type="submit" disabled={sending} className={`btn btn-primary btn-block ${s.submit}`}>
+        {sending ? 'Sending…' : submitLabel}
       </button>
       {note && <p className={s.note}>{note}</p>}
     </form>

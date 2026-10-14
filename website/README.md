@@ -38,8 +38,8 @@ src/
 - **Images** are resolved through `lib/images.ts`, which mirrors the original
   `img()` key transform over a Vite `import.meta.glob`, so verbatim data paths
   (`photos/x.jpg`, `new-new-images/…`) map to hashed bundle URLs.
-- **Forms** are client-side only: they validate and show a success state; no
-  data is sent to a backend.
+- **Forms** validate client-side, then post to the contact API in `../api`
+  (single-use token + rate limiting). Set `VITE_API_URL` (see `.env.example`).
 - **Icons** are data-driven (SVG path `d` strings in `lib/icons.ts` and the
   tour day-meta table); no icon library.
 
