@@ -1,0 +1,128 @@
+/* Hero */
+.heroBand {
+  position: relative;
+  background: var(--color-accent-100);
+}
+.heroGrid {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  padding: clamp(40px, 6vw, 86px) var(--space-4);
+}
+@media (min-width: 860px) {
+  .heroGrid { grid-template-columns: 1.05fr 0.95fr; }
+}
+.heroCopy {
+  animation: moslideup 0.7s ease both;
+}
+.heroTag {
+  margin-bottom: 20px;
+}
+.heroTitle {
+  font-size: clamp(38px, 5.4vw, 66px);
+  line-height: 1.02;
+  margin: 16px 0 0;
+  letter-spacing: -0.02em;
+}
+.heroLead {
+  font-size: clamp(16px, 1.4vw, 19px);
+  line-height: 1.6;
+  max-width: 46ch;
+  margin: 22px 0 0;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+}
+.heroCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.heroBtn {
+  padding: 13px 26px;
+  font-size: 15px;
+}
+.heroStats {
+  margin-top: 40px;
+}
+
+/* Welcome */
+.welcomeGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+@media (min-width: 860px) {
+  .welcomeGrid { grid-template-columns: 1fr 1.1fr; }
+}
+.kicker {
+  font-size: 11px;
+}
+.welcomeTitle {
+  font-size: clamp(28px, 3.4vw, 40px);
+  margin: 10px 0 0;
+  max-width: 18ch;
+}
+.para {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+.para:first-of-type {
+  margin-top: 20px;
+}
+.metaLink {
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+/* Grids */
+.expHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 20px;
+  justify-content: space-between;
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-top: 44px;
+}
+.tourGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+  margin-top: 44px;
+}
+
+/* Enquire */
+.enquireGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+@media (min-width: 860px) {
+  .enquireGrid { grid-template-columns: 1fr 1.15fr; }
+}
+.enquireTitle {
+  font-size: clamp(28px, 3.4vw, 42px);
+  margin: 10px 0 0;
+  max-width: 16ch;
+}
+.enquireLead {
+  font-size: 16.5px;
+  line-height: 1.65;
+  margin-top: 18px;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  max-width: 44ch;
+}
+.enquireInfo {
+  margin-top: 28px;
+}

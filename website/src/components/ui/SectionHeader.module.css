@@ -1,0 +1,22 @@
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kicker {
+  font-size: 11px;
+}
+
+.title {
+  margin: 10px 0 0;
+}
+.sizeSm { font-size: clamp(26px, 3.2vw, 36px); }
+.sizeMd { font-size: clamp(28px, 3.4vw, 40px); }
+.sizeLg { font-size: clamp(28px, 3.4vw, 42px); }
+
+.intro {
+  font-size: 16px;
+  margin-top: 14px;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+}

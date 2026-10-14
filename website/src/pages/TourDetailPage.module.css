@@ -1,0 +1,161 @@
+.heroTagMain {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 6px 14px;
+}
+.heroTagSub {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  padding: 6px 14px;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 52px);
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .overviewGrid { grid-template-columns: 1.7fr 1fr; }
+}
+
+.kicker { font-size: 11px; }
+.overviewTitle {
+  font-size: clamp(26px, 3.2vw, 36px);
+  margin: 10px 0 0;
+}
+.para {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+.para:first-of-type { margin-top: 16px; }
+
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.factCard {
+  background: var(--color-surface);
+  padding: 18px;
+  gap: 4px;
+}
+.factKey {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--color-text) 58%, transparent);
+}
+.factVal {
+  font-family: var(--font-heading);
+  font-size: 22px;
+}
+
+.highlightsTitle { font-size: 22px; margin: 34px 0 0; }
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px 22px;
+  margin-top: 16px;
+}
+.highlightRow { display: flex; gap: 10px; align-items: flex-start; }
+.highlightIcon { color: var(--color-accent-600); flex: none; margin-top: 2px; }
+.highlightText { font-size: 14.5px; line-height: 1.4; }
+
+.sidebar { position: static; }
+@media (min-width: 900px) {
+  .sidebar { position: sticky; top: 88px; }
+}
+.bookingCard {
+  background: var(--color-bg);
+  padding: 26px;
+  border: 1px solid var(--color-divider);
+}
+.bookingTag {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+}
+.bookingDur {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  color: var(--color-text);
+  margin: 6px 0 4px;
+}
+.bookingNote {
+  font-size: 12.5px;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  margin: 0 0 18px;
+}
+.factList {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  margin-bottom: 18px;
+}
+.factRow { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; }
+.factRowKey { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+.factRowVal { font-weight: 600; text-align: right; }
+.bookingBtn { padding: 13px; font-size: 15px; margin: 0; }
+.bookingHint {
+  font-size: 12px;
+  text-align: center;
+  margin: 14px 0 0;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+
+.routeHead { max-width: 52ch; margin-bottom: 28px; }
+.routeCard {
+  background: var(--color-bg);
+  padding: clamp(18px, 3vw, 32px);
+  overflow-x: auto;
+}
+
+.itinHead { margin-bottom: 48px; }
+
+.inclGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 3vw, 44px);
+}
+@media (min-width: 900px) {
+  .inclGrid { grid-template-columns: 1fr 1fr; }
+}
+.inclHead {
+  font-size: 24px;
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.inclHead2 { margin: 28px 0 18px; }
+
+.galleryTitle { font-size: clamp(26px, 3.2vw, 36px); margin: 10px 0 26px; }
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+.galleryImg {
+  border-radius: var(--radius-md);
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--shadow-sm);
+}
+.galleryWide {
+  aspect-ratio: 2 / 1;
+  grid-column: span 2;
+}
+
+.enquireHead { margin: 0 auto 32px; }
+.waLink { color: var(--color-accent-700); font-weight: 600; text-decoration: none; }
+
+.relatedTitle { font-size: clamp(24px, 3vw, 34px); margin: 0 0 26px; }
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}

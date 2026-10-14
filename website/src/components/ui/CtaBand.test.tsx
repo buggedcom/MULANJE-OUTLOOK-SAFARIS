@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { MemoryRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { CtaBand } from './CtaBand';
 import { renderWithRouter } from '../../test/router';
 
@@ -32,6 +33,38 @@ describe('GIVEN a CtaBand with primary and secondary actions', () => {
       );
       expect(screen.getByRole('link', { name: 'Enquire' })).toHaveAttribute('href', '/contact');
       expect(screen.getByRole('link', { name: 'Browse tours' })).toHaveAttribute('href', '/tours');
+    });
+  });
+});
+
+describe('GIVEN a CtaBand whose secondary carries router state', () => {
+  describe('WHEN the secondary link is followed', () => {
+    it('THEN the target route receives that state (scroll-to-enquire survives)', () => {
+      let seen: unknown;
+      function StateProbe() {
+        seen = useLocation().state;
+        return null;
+      }
+      render(
+        <MemoryRouter initialEntries={['/somewhere']}>
+          <Routes>
+            <Route
+              path="/somewhere"
+              element={
+                <CtaBand
+                  title="t"
+                  sub="s"
+                  primary={{ label: 'Go', to: '/x' }}
+                  secondary={{ label: 'Plan my trip', to: '/', state: { scrollTo: 'enquire' } }}
+                />
+              }
+            />
+            <Route path="/" element={<StateProbe />} />
+          </Routes>
+        </MemoryRouter>,
+      );
+      fireEvent.click(screen.getByRole('link', { name: 'Plan my trip' }));
+      expect(seen).toEqual({ scrollTo: 'enquire' });
     });
   });
 });
