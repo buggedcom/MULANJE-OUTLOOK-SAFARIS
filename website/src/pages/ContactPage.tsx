@@ -51,6 +51,7 @@ export function ContactPage() {
           </div>
 
           <EnquiryForm
+            topic="Contact page enquiry"
             fields={[
               { name: 'interest', label: 'Interested in', type: 'select', options: contactInterests },
               { name: 'dates', label: 'Approx. dates', type: 'text', placeholder: 'e.g. June 2026' },

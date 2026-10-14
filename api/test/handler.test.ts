@@ -174,6 +174,18 @@ describe('GIVEN malformed or hostile input', () => {
     const sent = JSON.parse((fetchMock.mock.calls[0][1] as RequestInit).body as string);
     expect(sent.subject).not.toMatch(/[\r\n]/);
   });
+  it('includes the topic and page in the email and subject', async () => {
+    await post(await valid({ topic: '5-Day Grand Mulanje Traverse', page: 'https://site.example/#/tours/5-day' }));
+    const sent = JSON.parse((fetchMock.mock.calls[0][1] as RequestInit).body as string);
+    expect(sent.subject).toBe('Enquiry: 5-Day Grand Mulanje Traverse - Ada');
+    expect(sent.text).toContain('Enquiry about: 5-Day Grand Mulanje Traverse');
+    expect(sent.text).toContain('Sent from: https://site.example/#/tours/5-day');
+  });
+  it('drops a page value that is not an http(s) URL', async () => {
+    await post(await valid({ page: 'javascript:alert(1)' }));
+    const sent = JSON.parse((fetchMock.mock.calls[0][1] as RequestInit).body as string);
+    expect(sent.text).not.toContain('javascript:');
+  });
   it('unknown fields are not forwarded', async () => {
     await post(await valid({ is_admin: 'yes' }));
     expect((fetchMock.mock.calls[0][1] as RequestInit).body as string).not.toContain('is_admin');

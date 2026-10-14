@@ -89,6 +89,25 @@ describe('GIVEN all required fields are valid and the API accepts the enquiry', 
   });
 });
 
+describe('GIVEN a form with a topic and an untouched select', () => {
+  it('WHEN submitted THEN sends the topic, page URL and the select default', async () => {
+    const fetchMock = mockApi(() => new Response('{"ok":true}', { status: 200 }));
+    const user = userEvent.setup();
+    await renderForm({
+      topic: '3-Day Mount Mulanje Trek',
+      fields: [{ name: 'interest', label: 'Interested in', type: 'select', options: ['Trek', 'Safari'] }],
+    });
+    await fillAndSend(user);
+    await screen.findByRole('status');
+    const call = fetchMock.mock.calls.find(([u]) => u.endsWith('/api/contact'))!;
+    expect(JSON.parse((call[1] as RequestInit).body as string)).toMatchObject({
+      topic: '3-Day Mount Mulanje Trek',
+      page: window.location.href,
+      interest: 'Trek',
+    });
+  });
+});
+
 describe('GIVEN the API refuses the enquiry', () => {
   it('WHEN rate limited THEN shows an error and keeps the form', async () => {
     mockApi(() => new Response('{"error":"rate_limited"}', { status: 429 }));

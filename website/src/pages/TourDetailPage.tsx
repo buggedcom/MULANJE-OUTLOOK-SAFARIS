@@ -173,6 +173,7 @@ export function TourDetailPage() {
           />
         </div>
         <EnquiryForm
+          topic={d.title}
           surface="var(--color-bg)"
           fields={[
             { name: 'month', label: 'Preferred month', type: 'text', placeholder: 'e.g. July 2026' },
