@@ -39,6 +39,7 @@ function HomeEnquire() {
           </div>
         </div>
         <EnquiryForm
+          topic="Home page enquiry"
           fields={[
             { name: 'interest', label: 'Interested in', type: 'select', options: enquiryInterests },
             { name: 'dates', label: 'Approx. dates', type: 'text', placeholder: 'e.g. June 2026' },

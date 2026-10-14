@@ -5,6 +5,9 @@ export interface Enquiry {
   email: string;
   message: string;
   extras: Record<string, string>;
+  /** What the enquiry is about (tour title / page) and the page URL it came from. */
+  topic: string;
+  page: string;
 }
 
 const LIMITS: Record<string, number> = {
@@ -16,8 +19,12 @@ const LIMITS: Record<string, number> = {
   month: 200,
   group: 200,
   fitness: 200,
+  topic: 200,
+  page: 500,
 };
 export const EXTRA_FIELDS = ['interest', 'dates', 'month', 'group', 'fitness'] as const;
+// Where the enquiry came from; set by the client, so treated as untrusted text.
+const CONTEXT_FIELDS = ['topic', 'page'] as const;
 
 const EMAIL_RE = /^[^\s@<>(),;:"[\]\\]+@[^\s@<>(),;:"[\]\\]+\.[^\s@<>(),;:"[\]\\]+$/;
 // eslint-disable-next-line no-control-regex
@@ -43,7 +50,7 @@ export function parseEnquiry(input: unknown): ParseResult {
   const errors: Record<string, string> = {};
   const out: Record<string, string> = {};
 
-  for (const name of ['name', 'email', 'message', ...EXTRA_FIELDS]) {
+  for (const name of ['name', 'email', 'message', ...EXTRA_FIELDS, ...CONTEXT_FIELDS]) {
     const v = clean(raw[name], name === 'message');
     if (v === null) errors[name] = 'Invalid value';
     else if (v.length > LIMITS[name]) errors[name] = 'Too long';
@@ -53,9 +60,15 @@ export function parseEnquiry(input: unknown): ParseResult {
   if (!out.email && !errors.email) errors.email = 'Required';
   else if (out.email && !errors.email && !EMAIL_RE.test(out.email)) errors.email = 'Invalid email';
 
+  // Only keep a page value that is a plain http(s) URL; otherwise drop it.
+  if (out.page && !/^https?:\/\/\S+$/.test(out.page)) out.page = '';
+
   if (Object.keys(errors).length) return { ok: false, errors };
 
   const extras: Record<string, string> = {};
   for (const f of EXTRA_FIELDS) if (out[f]) extras[f] = out[f];
-  return { ok: true, enquiry: { name: out.name, email: out.email, message: out.message, extras } };
+  return {
+    ok: true,
+    enquiry: { name: out.name, email: out.email, message: out.message, extras, topic: out.topic, page: out.page },
+  };
 }

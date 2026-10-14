@@ -21,6 +21,8 @@ export interface EnquiryFormProps {
   submitLabel?: string;
   /** Small print under the submit button. */
   note?: ReactNode;
+  /** What this form is about, e.g. the tour title; included in the email. */
+  topic?: string;
   /** Card background token. */
   surface?: string;
 }
@@ -49,6 +51,7 @@ export function EnquiryForm({
   messagePlaceholder = 'Group size, interests, how long you have…',
   submitLabel = 'Send enquiry',
   note = 'We reply personally within 24 hours.',
+  topic,
   surface = 'var(--color-surface)',
 }: EnquiryFormProps) {
   const uid = useId();
@@ -111,8 +114,17 @@ export function EnquiryForm({
       void fetchToken().then(setToken);
       return;
     }
-    const payload: Record<string, string> = { token: t, website: trap };
-    for (const f of allFields) payload[f.name] = (values[f.name] ?? '').trim();
+    const payload: Record<string, string> = {
+      token: t,
+      website: trap,
+      page: window.location.href,
+      topic: topic ?? '',
+    };
+    for (const f of allFields) {
+      // A select displays its first option, so send that when it is untouched.
+      const fallback = f.type === 'select' ? (f.options?.[0] ?? '') : '';
+      payload[f.name] = (values[f.name] ?? fallback).trim();
+    }
     const result = await submitEnquiry(payload);
     setSending(false);
     if (result.ok) {

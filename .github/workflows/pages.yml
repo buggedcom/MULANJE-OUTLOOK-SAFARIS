@@ -1,13 +1,12 @@
-name: Deploy demos to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
-      - 'demo1/**'
-      - 'demo2/**'
-      - 'demo3/**'
-      - 'demo4/**'
+      - 'website/**'
+      - 'archive/**'
+      - 'demo*/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -28,16 +27,47 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Require API URL
+        env:
+          API_URL: ${{ vars.API_URL }}
+        run: |
+          if [ -z "$API_URL" ]; then
+            echo "::error::Set the repository variable API_URL (Settings > Secrets and variables > Actions > Variables) to the deployed Worker URL."
+            exit 1
+          fi
+
+      - name: Test and build website
+        working-directory: website
+        env:
+          VITE_API_URL: ${{ vars.API_URL }}
+        run: |
+          npm ci
+          npm run typecheck
+          npm test
+          npm run build
+
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp -r demo1/. _site/
-          mkdir -p _site/demo2
-          cp -r demo2/. _site/demo2/
-          mkdir -p _site/demo3
-          cp -r demo3/. _site/demo3/
-          mkdir -p _site/demo4
-          cp -r demo4/. _site/demo4/
+          cp -r website/dist/. _site/
+          # Keep the old demo URLs alive (/demo1 .. /demo4) from wherever they live.
+          for d in demo1 demo2 demo3 demo4; do
+            for src in "archive/$d" "$d"; do
+              if [ -d "$src" ]; then
+                mkdir -p "_site/$d"
+                cp -r "$src/." "_site/$d/"
+                break
+              fi
+            done
+          done
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -82,6 +82,29 @@ describe('GIVEN a request from a disallowed origin', () => {
   });
 });
 
+describe('GIVEN a CORS preflight', () => {
+  const preflight = (origin: string) =>
+    handle(
+      new Request('https://api.test/api/contact', {
+        method: 'OPTIONS',
+        headers: { Origin: origin, 'Access-Control-Request-Method': 'POST', 'Access-Control-Request-Headers': 'content-type' },
+      }),
+      env,
+      deps,
+    );
+  it('WHEN the origin is allowed THEN returns 204 with CORS headers', async () => {
+    const res = await preflight(ORIGIN);
+    expect(res.status).toBe(204);
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBe(ORIGIN);
+    expect(res.headers.get('Access-Control-Allow-Headers')).toContain('Content-Type');
+  });
+  it('WHEN the origin is not allowed THEN returns 403 with no CORS headers', async () => {
+    const res = await preflight('https://evil.example');
+    expect(res.status).toBe(403);
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull();
+  });
+});
+
 describe('GIVEN a valid token and enquiry', () => {
   it('WHEN posted THEN the enquiry is emailed with reply_to set and CORS echoed', async () => {
     const res = await post(await valid());
@@ -150,6 +173,18 @@ describe('GIVEN malformed or hostile input', () => {
     await post(await valid({ name: 'Ada\r\nBcc: evil@example.com' }));
     const sent = JSON.parse((fetchMock.mock.calls[0][1] as RequestInit).body as string);
     expect(sent.subject).not.toMatch(/[\r\n]/);
+  });
+  it('includes the topic and page in the email and subject', async () => {
+    await post(await valid({ topic: '5-Day Grand Mulanje Traverse', page: 'https://site.example/#/tours/5-day' }));
+    const sent = JSON.parse((fetchMock.mock.calls[0][1] as RequestInit).body as string);
+    expect(sent.subject).toBe('Enquiry: 5-Day Grand Mulanje Traverse - Ada');
+    expect(sent.text).toContain('Enquiry about: 5-Day Grand Mulanje Traverse');
+    expect(sent.text).toContain('Sent from: https://site.example/#/tours/5-day');
+  });
+  it('drops a page value that is not an http(s) URL', async () => {
+    await post(await valid({ page: 'javascript:alert(1)' }));
+    const sent = JSON.parse((fetchMock.mock.calls[0][1] as RequestInit).body as string);
+    expect(sent.text).not.toContain('javascript:');
   });
   it('unknown fields are not forwarded', async () => {
     await post(await valid({ is_admin: 'yes' }));
