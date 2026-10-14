@@ -1,0 +1,128 @@
+.list {
+  position: relative;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+  position: relative;
+}
+@media (min-width: 900px) {
+  .row { grid-template-columns: 56px 1fr; gap: 28px; }
+}
+
+.rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dayBtn {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  background: var(--color-surface);
+  color: var(--color-accent-700);
+}
+.dayBtn[data-open='true'] {
+  background: var(--color-accent);
+  color: #fff;
+}
+@media (min-width: 900px) {
+  .dayBtn { width: 52px; height: 52px; font-size: 19px; }
+}
+
+.connector {
+  width: 2px;
+  flex: 1;
+  min-height: 28px;
+  background: var(--color-divider);
+  margin: 6px 0;
+}
+
+.body {
+  padding-bottom: 26px;
+  min-width: 0;
+}
+
+.header {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.headText {
+  flex: 1;
+}
+.dayEyebrow {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-700);
+}
+.dayTitle {
+  font-size: 19px;
+  margin: 3px 0 0;
+  line-height: 1.15;
+}
+@media (min-width: 900px) {
+  .dayTitle { font-size: 23px; }
+}
+.chevron {
+  flex: none;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+  transition: transform 0.25s ease;
+}
+.chevron[data-open='true'] {
+  transform: rotate(180deg);
+}
+
+.detail {
+  margin-top: 16px;
+  animation: moslideup 0.35s ease both;
+}
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+@media (min-width: 900px) {
+  .detailGrid { grid-template-columns: 1.4fr 1fr; }
+}
+.dayBody {
+  font-size: 15px;
+  line-height: 1.62;
+  margin: 0;
+  color: color-mix(in srgb, var(--color-text) 74%, transparent);
+}
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.metaChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+}
+.dayPhoto {
+  border-radius: var(--radius-md);
+  min-height: 160px;
+  box-shadow: var(--shadow-sm);
+}

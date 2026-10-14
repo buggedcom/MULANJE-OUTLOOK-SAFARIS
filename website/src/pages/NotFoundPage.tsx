@@ -1,23 +1,14 @@
 import { Link } from 'react-router-dom';
+import { cx } from '../lib/cx';
+import s from './NotFoundPage.module.css';
 
 export function NotFoundPage() {
   return (
-    <section
-      style={{
-        maxWidth: '640px',
-        margin: '0 auto',
-        padding: 'clamp(64px,10vw,140px) var(--space-4)',
-        textAlign: 'center',
-      }}
-    >
-      <span className="card-kicker" style={{ fontSize: '11px' }}>
-        404
-      </span>
-      <h1 style={{ marginTop: '10px' }}>Page not found</h1>
-      <p style={{ marginTop: '14px', color: 'color-mix(in srgb, var(--color-text) 72%, transparent)' }}>
-        The page you’re looking for doesn’t exist or has moved.
-      </p>
-      <Link className="btn btn-primary" to="/" style={{ padding: '13px 26px', marginTop: '8px' }}>
+    <section className={s.root}>
+      <span className={cx('card-kicker', s.kicker)}>404</span>
+      <h1 className={s.title}>Page not found</h1>
+      <p className={s.text}>The page you’re looking for doesn’t exist or has moved.</p>
+      <Link className={cx('btn btn-primary', s.btn)} to="/">
         Back to home
       </Link>
     </section>

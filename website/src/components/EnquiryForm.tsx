@@ -1,5 +1,6 @@
-import { useId, useState, type CSSProperties, type ReactNode } from 'react';
+import { useId, useState, type ReactNode } from 'react';
 import { Field } from './ui/Field';
+import s from './EnquiryForm.module.css';
 
 export interface FieldDef {
   name: string;
@@ -78,25 +79,14 @@ export function EnquiryForm({
     if (Object.keys(next).length === 0) setSubmitted(true);
   };
 
-  const cardStyle: CSSProperties = {
-    background: surface,
-    borderRadius: 'var(--radius-lg)',
-    padding: 'clamp(24px,3vw,36px)',
-    boxShadow: 'var(--shadow-md)',
-  };
+  // Background is a caller-provided token, so it stays inline.
+  const cardStyle = { background: surface };
 
   if (submitted) {
     return (
-      <div style={cardStyle} role="status">
-        <h3 style={{ fontSize: '22px', margin: 0 }}>Thank you — your enquiry is on its way.</h3>
-        <p
-          style={{
-            fontSize: '15px',
-            lineHeight: 1.6,
-            marginTop: '12px',
-            color: 'color-mix(in srgb, var(--color-text) 75%, transparent)',
-          }}
-        >
+      <div className={s.card} style={cardStyle} role="status">
+        <h3 className={s.successTitle}>Thank you — your enquiry is on its way.</h3>
+        <p className={s.successText}>
           A local expert will reply personally within 24 hours. In the meantime, feel free to
           message us on WhatsApp for a quicker response.
         </p>
@@ -107,8 +97,8 @@ export function EnquiryForm({
   const scalar = allFields.filter((f) => f.type !== 'textarea');
 
   return (
-    <form onSubmit={onSubmit} style={cardStyle} noValidate aria-label="Enquiry form">
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: '16px' }}>
+    <form onSubmit={onSubmit} className={s.card} style={cardStyle} noValidate aria-label="Enquiry form">
+      <div className={s.grid}>
         {scalar.map((f) => {
           const id = `${uid}-${f.name}`;
           const err = errors[f.name];
@@ -117,8 +107,7 @@ export function EnquiryForm({
               {f.type === 'select' ? (
                 <select
                   id={id}
-                  className="input"
-                  style={{ appearance: 'none' }}
+                  className={`input ${s.select}`}
                   value={values[f.name] ?? ''}
                   onChange={(e) => set(f.name, e.target.value)}
                 >
@@ -140,7 +129,7 @@ export function EnquiryForm({
                 />
               )}
               {err && (
-                <span role="alert" style={{ display: 'block', marginTop: '5px', fontSize: '12px', color: 'var(--color-accent-700)' }}>
+                <span role="alert" className={s.error}>
                   {err}
                 </span>
               )}
@@ -149,24 +138,22 @@ export function EnquiryForm({
         })}
       </div>
 
-      <Field label={messageField.label} htmlFor={`${uid}-message`} style={{ marginTop: '16px' }}>
-        <textarea
-          id={`${uid}-message`}
-          className="input"
-          placeholder={messageField.placeholder}
-          value={values.message ?? ''}
-          onChange={(e) => set('message', e.target.value)}
-        />
-      </Field>
+      <div className={s.messageField}>
+        <Field label={messageField.label} htmlFor={`${uid}-message`}>
+          <textarea
+            id={`${uid}-message`}
+            className="input"
+            placeholder={messageField.placeholder}
+            value={values.message ?? ''}
+            onChange={(e) => set('message', e.target.value)}
+          />
+        </Field>
+      </div>
 
-      <button type="submit" className="btn btn-primary btn-block" style={{ padding: '13px', fontSize: '15px', marginTop: '20px' }}>
+      <button type="submit" className={`btn btn-primary btn-block ${s.submit}`}>
         {submitLabel}
       </button>
-      {note && (
-        <p style={{ fontSize: '12px', textAlign: 'center', margin: '12px 0 0', color: 'color-mix(in srgb, var(--color-text) 55%, transparent)' }}>
-          {note}
-        </p>
-      )}
+      {note && <p className={s.note}>{note}</p>}
     </form>
   );
 }

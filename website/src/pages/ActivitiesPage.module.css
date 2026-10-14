@@ -1,0 +1,47 @@
+.media {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 10px;
+}
+
+.photoLead {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  min-height: 220px;
+}
+.photoSub {
+  border-radius: var(--radius-md);
+  min-height: 140px;
+}
+
+@media (min-width: 900px) {
+  .media { height: 380px; }
+  .photoLead,
+  .photoSub { min-height: auto; }
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+}
+
+.name {
+  font-size: clamp(26px, 3.2vw, 38px);
+  margin: 12px 0 0;
+}
+
+.lead {
+  font-size: 16.5px;
+  line-height: 1.62;
+  margin-top: 16px;
+  color: color-mix(in srgb, var(--color-text) 82%, transparent);
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.62;
+  color: color-mix(in srgb, var(--color-text) 72%, transparent);
+}
+
+.chips {
+  margin-top: 20px;
+}
