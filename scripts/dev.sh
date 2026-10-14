@@ -4,8 +4,8 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-API_PORT=8787
-SITE_PORT=5173
+API_PORT="${API_PORT:-8787}"
+SITE_PORT="${SITE_PORT:-5173}"
 
 if [[ ! -f "$ROOT/api/.dev.vars" ]]; then
   echo "Missing api/.dev.vars. Create it from the example and fill in the secrets:" >&2
@@ -21,10 +21,18 @@ for dir in api website; do
 done
 
 pids=()
+
+# Kill a process and everything it spawned (npx -> node -> workerd/esbuild...).
+kill_tree() {
+  local pid=$1 child
+  for child in $(pgrep -P "$pid" 2>/dev/null || true); do kill_tree "$child"; done
+  kill "$pid" 2>/dev/null || true
+}
+
 cleanup() {
   trap - INT TERM EXIT
   for pid in "${pids[@]:-}"; do
-    [[ -n "$pid" ]] && kill "$pid" 2>/dev/null || true
+    [[ -n "$pid" ]] && kill_tree "$pid"
   done
   wait 2>/dev/null || true
 }
