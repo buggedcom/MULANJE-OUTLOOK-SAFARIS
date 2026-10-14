@@ -25,11 +25,11 @@ describe('GIVEN the About route', () => {
       expect(screen.getByRole('link', { name: 'Start planning' })).toHaveAttribute('href', '/contact');
     });
 
-    it('THEN resolves every image to a .jpg URL', () => {
+    it('THEN resolves every image to an imagetools-processed URL', () => {
       const { container } = renderWithRouter(<AboutPage />);
       const imgs = [...container.querySelectorAll('img')];
       expect(imgs.length).toBeGreaterThan(0);
-      for (const im of imgs) expect(im.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+      for (const im of imgs) expect(im.getAttribute('src')).toMatch(/@imagetools|\.webp/);
     });
   });
 });

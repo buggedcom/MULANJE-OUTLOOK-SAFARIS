@@ -17,7 +17,7 @@ describe('GIVEN a commitment band', () => {
       expect(screen.getByText('Our commitment')).toBeInTheDocument();
       expect(screen.getByRole('heading', { level: 2, name: 'Responsible tourism that gives back' })).toBeInTheDocument();
       expect(screen.getByText('Local guides & porters')).toBeInTheDocument();
-      expect(container.querySelector('img')?.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+      expect(container.querySelector('img')?.getAttribute('src')).toMatch(/@imagetools|\.webp/);
     });
   });
 });

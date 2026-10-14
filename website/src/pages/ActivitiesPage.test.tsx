@@ -24,10 +24,10 @@ describe('GIVEN the Activities route', () => {
       expect(screen.getByRole('heading', { name: 'Bundle activities into your tour' })).toBeInTheDocument();
     });
 
-    it('THEN resolves every image to a .jpg URL', () => {
+    it('THEN resolves every image to an imagetools-processed URL', () => {
       const { container } = renderWithRouter(<ActivitiesPage />);
       for (const im of container.querySelectorAll('img')) {
-        expect(im.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+        expect(im.getAttribute('src')).toMatch(/@imagetools|\.webp/);
       }
     });
   });

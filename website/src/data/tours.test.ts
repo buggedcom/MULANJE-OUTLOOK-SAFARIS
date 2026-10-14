@@ -98,10 +98,10 @@ describe('GIVEN every image path referenced by the tours and site data', () => {
   });
 
   describe('WHEN each path is resolved through img()', () => {
-    it.each(paths)('THEN "%s" resolves to a bundled .jpg URL string', (path) => {
+    it.each(paths)('THEN "%s" resolves to a bundled imagetools URL string', (path) => {
       const url = img(path);
       expect(typeof url).toBe('string');
-      expect(url.endsWith('.jpg')).toBe(true);
+      expect(url).toMatch(/@imagetools|\.webp/);
       expect(url).not.toBe(path);
     });
   });

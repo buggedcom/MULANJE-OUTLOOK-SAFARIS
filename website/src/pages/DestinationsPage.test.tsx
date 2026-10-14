@@ -32,10 +32,10 @@ describe('GIVEN the Destinations route', () => {
       expect(screen.getByRole('link', { name: 'See a sample tour' })).toHaveAttribute('href', '/tours/6-day-southern');
     });
 
-    it('THEN resolves every image to a .jpg URL', () => {
+    it('THEN resolves every image to an imagetools-processed URL', () => {
       const { container } = renderWithRouter(<DestinationsPage />);
       for (const im of container.querySelectorAll('img')) {
-        expect(im.getAttribute('src')?.endsWith('.jpg')).toBe(true);
+        expect(im.getAttribute('src')).toMatch(/@imagetools|\.webp/);
       }
     });
 

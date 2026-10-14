@@ -7,12 +7,16 @@
    `new-new-images/x`). We reproduce that exact key transform against a Vite
    glob so verbatim data paths keep working and Vite still hashes the assets.
 
+   Sources are transcoded to WebP at build time by vite-imagetools (the
+   `query` below); the key transform still uses the original .jpg names.
+
    `import: 'default'` is required: an eager glob without it yields module
    namespace objects ({ default: url }), which would render as [object Object].
 */
 
 const modules = import.meta.glob('../assets/**/*.jpg', {
   eager: true,
+  query: { format: 'webp', w: '1600', quality: '75' },
   import: 'default',
 }) as Record<string, string>;
 

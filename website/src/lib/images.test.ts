@@ -3,10 +3,10 @@ import { img } from './images';
 
 describe('GIVEN a photos/ path that exists in the asset map', () => {
   describe('WHEN img() is called', () => {
-    it('THEN returns a URL string ending in .jpg', () => {
+    it('THEN returns a URL string pointing at the transcoded image', () => {
       const url = img('photos/sapitwa.jpg');
       expect(typeof url).toBe('string');
-      expect(url.endsWith('.jpg')).toBe(true);
+      expect(url).toMatch(/@imagetools|\.webp/);
     });
 
     it('THEN does not return the raw input path', () => {
@@ -17,10 +17,10 @@ describe('GIVEN a photos/ path that exists in the asset map', () => {
 
 describe('GIVEN a prefixed gallery path that exists (new-new-new-images/)', () => {
   describe('WHEN img() is called', () => {
-    it('THEN returns a resolved URL string ending in .jpg', () => {
+    it('THEN returns a resolved URL string pointing at the transcoded image', () => {
       const url = img('new-new-new-images/nnn-1.jpg');
       expect(typeof url).toBe('string');
-      expect(url.endsWith('.jpg')).toBe(true);
+      expect(url).toMatch(/@imagetools|\.webp/);
       expect(url).not.toBe('new-new-new-images/nnn-1.jpg');
     });
   });
