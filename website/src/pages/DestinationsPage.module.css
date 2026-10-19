@@ -64,17 +64,12 @@
 .chips {
   margin: 20px 0 0;
 }
-.priceRow {
+.actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
   margin-top: 26px;
-}
-.price {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  color: var(--color-accent-700);
 }
 .planBtn {
   padding: 12px 22px;
