@@ -57,8 +57,7 @@ export function DestinationsPage() {
                 <div className={s.chips}>
                   <ChipRow items={d.acts} />
                 </div>
-                <div className={s.priceRow}>
-                  <span className={s.price}>{d.price}</span>
+                <div className={s.actions}>
                   <Link className={cx('btn btn-primary', s.planBtn)} to="/tours">
                     Plan a visit
                   </Link>

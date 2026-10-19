@@ -154,7 +154,6 @@ export interface TourCard {
   title: string;
   img: string;
   grade: string;
-  price: string;
   featured?: boolean;
   desc: string;
   slug: TourSlug;
@@ -166,7 +165,6 @@ export const homeTourCards: TourCard[] = [
     title: '3-Day Mount Mulanje Trek',
     img: 'photos/summit-sign.jpg',
     grade: 'Grade 4 · 3 days',
-    price: 'from $390',
     desc: 'A rewarding climb to Sapitwa Peak with mountain-hut nights, guides, porters and breathtaking views.',
     slug: '3-day-mulanje',
   },
@@ -174,7 +172,6 @@ export const homeTourCards: TourCard[] = [
     title: '6-Day Southern Malawi Tour',
     img: 'photos/mulanje-view.jpg',
     grade: 'Signature · 6 days',
-    price: 'from $1,140',
     desc: 'Mount Mulanje, Zomba, Liwonde safari and Lake Malawi combined into one unforgettable journey.',
     slug: '6-day-southern',
   },
@@ -182,7 +179,6 @@ export const homeTourCards: TourCard[] = [
     title: 'Liwonde Wildlife Safari',
     img: 'photos/hippos.jpg',
     grade: 'Safari · 2–3 days',
-    price: 'from $310',
     desc: 'Exciting game drives and peaceful boat safaris along the mighty Shire River.',
     slug: 'liwonde-safari',
   },
@@ -190,7 +186,6 @@ export const homeTourCards: TourCard[] = [
     title: 'Tea & Culture Experience',
     img: 'photos/tea-mountain.jpg',
     grade: 'Relaxed · 2 days',
-    price: 'from $180',
     desc: 'Historic tea estates followed by village visits and the warm traditions of local communities.',
     slug: 'tea-culture',
   },
@@ -202,7 +197,6 @@ export const toursList: TourCard[] = [
     title: '3-Day Mount Mulanje Trek',
     img: 'photos/summit-sign.jpg',
     grade: 'Grade 4 · 3 days',
-    price: 'from $390',
     featured: true,
     desc: 'A rewarding adventure to Sapitwa Peak, including mountain-hut accommodation, experienced guides, porters, meals and breathtaking views.',
     slug: '3-day-mulanje',
@@ -211,7 +205,6 @@ export const toursList: TourCard[] = [
     title: '5-Day Grand Mulanje Traverse',
     img: 'photos/new-misty-summit.jpg',
     grade: 'Grade 3 · 5 days',
-    price: 'from $690',
     desc: 'A traverse across the entire massif - diverse vegetation, panoramic landscapes, optional peaks above 2,500m and numerous rock pools.',
     slug: '5-day-traverse',
   },
@@ -219,7 +212,6 @@ export const toursList: TourCard[] = [
     title: '6-Day Southern Malawi Tour',
     img: 'photos/mulanje-view.jpg',
     grade: 'Signature · 6 days',
-    price: 'from $1,140',
     featured: true,
     desc: 'Mount Mulanje, Zomba, a Liwonde safari and Lake Malawi combined into one unforgettable journey - our most complete trip.',
     slug: '6-day-southern',
@@ -228,7 +220,6 @@ export const toursList: TourCard[] = [
     title: 'Liwonde Wildlife Safari',
     img: 'photos/new-elephant.jpg',
     grade: 'Safari · 2–3 days',
-    price: 'from $310',
     desc: 'Exciting game drives and peaceful boat safaris along the Shire River, discovering Malawi’s remarkable wildlife.',
     slug: 'liwonde-safari',
   },
@@ -236,7 +227,6 @@ export const toursList: TourCard[] = [
     title: 'Tea & Culture Experience',
     img: 'photos/new-tea-landscape.jpg',
     grade: 'Relaxed · 2 days',
-    price: 'from $180',
     desc: 'Explore historic tea estates before visiting nearby villages to experience the traditions and hospitality of local communities.',
     slug: 'tea-culture',
   },
@@ -244,7 +234,6 @@ export const toursList: TourCard[] = [
     title: 'Southern Malawi Explorer',
     img: 'photos/new-lake-island.jpg',
     grade: 'Tailored · 7–10 days',
-    price: 'from $1,350',
     desc: 'Combine Mount Mulanje, tea estates, cultural experiences and a wildlife safari into one flexible, tailor-made journey.',
     slug: 'southern-explorer',
   },
@@ -259,7 +248,6 @@ export interface Destination {
   lead: string;
   body: string;
   acts: string[];
-  price: string;
 }
 
 export const destinations: Destination[] = [
@@ -271,7 +259,6 @@ export const destinations: Destination[] = [
     lead: 'Rising almost abruptly from a featureless plain, Mulanje is the third-largest mountain in Africa - a 640 km² massif blessed with 13 sister peaks. Sapitwa, at 3,002m, is the highest point in Central Africa, with views stretching to Lake Chirwa, Zomba and Mozambique.',
     body: 'A network of well-weathered trails connects the mountain huts, with detours to peaks, rock pools and sunset viewpoints. Our 1–6 day itineraries cover all the key areas of interest - the most popular being the sunrise summit challenge.',
     acts: ['Multi-day hiking', 'Zip-line river crossing', 'Top-rope climbing & abseiling', 'Tea field & factory tour'],
-    price: 'from $130 / day',
   },
   {
     id: 'liwonde',
@@ -281,7 +268,6 @@ export const destinations: Destination[] = [
     lead: 'One of the most accessible and professionally run parks in the south. The mighty Shire River and cathedral-like mopane woodlands make it a perfect habitat for the endangered black rhino, thriving elephant, buffalo and sable antelope.',
     body: 'Rich in birdlife - including Pel’s fishing owl and Lilian’s lovebird. Take a 3-hour boat trip to see elephants, hippos and crocodiles up close, a 4x4 game drive along the spinal route, or a nocturnal drive to watch the big cats hunt.',
     acts: ['4x4 game drives', 'Boat safari on the Shire', 'Walking safari', 'Conservation experiences'],
-    price: 'from $155 / day',
   },
   {
     id: 'lake',
@@ -291,7 +277,6 @@ export const destinations: Destination[] = [
     lead: 'The “Lake of Stars” is our main draw for anyone passing through the south - limitless watersports along expansive sandy beaches. Declared a UNESCO World Heritage Site in 1984 for its extraordinary diversity of cichlid fish.',
     body: 'Cape Maclear, a small fishing village within the national park, is the hub. The crystal waters around Domwe, Thumbi and Mumbo islands offer private snorkelling and kayaking, while a late-afternoon walk to Otters Point reveals the lake turning gold at sunset.',
     acts: ['Sailing to the islands', 'Snorkelling & kayaking', 'Sunset boat cruise', 'Beach volleyball', 'Village tour'],
-    price: 'from $95 / day',
   },
   {
     id: 'majete',
@@ -301,7 +286,6 @@ export const destinations: Destination[] = [
     lead: 'Just 90 minutes from Blantyre and home to Africa’s Big Five, Majete has the highest concentration of predators in Malawi - hyena, leopard, cheetah, wild dog and several prides of lion. Your chances of a sighting are almost certain.',
     body: 'As a non-profit, all funds generated in Majete support the reserve and the families who manage it. We recommend Thawale Lodge, where animals roam freely among guests, or the memorable Nakambe Hide sleep-out for the truly adventurous.',
     acts: ['Morning & afternoon game drives', 'Nakambe Hide sleep-out', 'Cultural dancing'],
-    price: 'from $145 / day',
   },
   {
     id: 'zomba',
@@ -311,7 +295,6 @@ export const destinations: Destination[] = [
     lead: 'A scenic bridge between mountain and lake. Zomba Plateau offers cool forest drives, trout streams and the celebrated Queen’s View sunset point, while Blantyre - Malawi’s commercial heart - is the arrival gateway for most journeys.',
     body: 'We often break the drive here for a sunrise stroll or a visit to a curio market, weaving Zomba into longer itineraries as a restful counterpoint between the summit and the Shire.',
     acts: ['Forest & viewpoint drives', 'Queen’s View sunset', 'City & market tour'],
-    price: 'included in tours',
   },
 ];
 
